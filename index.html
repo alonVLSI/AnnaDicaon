@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דיכאון כמתנה - מסע מהחושך אל האור</title>
+    <style>
+/* Global & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #20b2aa; /* Teal/Turquoise */
+    --primary-dark: #178f89;
+    --secondary-color: #111111;
+    --light-bg: #f5f5f5;
+    --dark-bg: #111111;
+    --darker-bg: #0a0a0a;
+    --light-text: #ffffff;
+    --dark-text: #333333;
+    --border-color: #2a2a2a;
+    --card-bg: rgba(30, 30, 30, 0.5);
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    line-height: 1.6;
+    direction: rtl;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn-primary, .btn-secondary, .btn-white, .btn-purchase {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-secondary {
+    background-color: #333;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #444;
+}
+
+.btn-white {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.btn-white:hover {
+    background-color: #f0f0f0;
+}
+
+.btn-purchase {
+    background-color: var(--primary-color);
+    color: white;
+    width: 100%;
+    padding: 16px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+.btn-purchase:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Header & Navigation */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(32, 178, 170, 0.2), transparent);
+    z-index: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgba(32, 178, 170, 0.2);
+    filter: blur(80px);
+    z-index: 0;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgba(100, 149, 237, 0.2);
+    filter: blur(100px);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.book-cover {
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+.book-cover-inner {
+    width: 200px;
+    height: 280px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(5deg);
+}
+
+.book-cover-inner h2 {
+    color: white;
+    transform: rotate(-5deg);
+    font-size: 1.2rem;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Section Styling */
+.section {
+    padding: 5rem 0;
+}
+
+.bg-dark {
+    background-color: var(--darker-bg);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.section-grid.reverse {
+    direction: ltr;
+}
+
+.section-grid.reverse .section-content {
+    direction: rtl;
+}
+
+.author-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.author-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: var(--primary-dark);
+    border: 4px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+/* Chapters List */
+.tabs {
+    margin-top: 2rem;
+}
+
+.tab-buttons {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 12px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab-button.active {
+    background-color: var(--primary-color);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.chapters-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.chapter-card {
+    background-color: rgba(40, 40, 40, 0.5);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    transition: background-color 0.3s;
+}
+
+.chapter-card:hover {
+    background-color: rgba(50, 50, 50, 0.5);
+}
+
+.chapter-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+/* Testimonials */
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background-color: rgba(40, 40, 40, 0.5);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    position: relative;
+}
+
+.testimonial-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: var(--primary-color);
+    opacity: 0.5;
+    font-size: 1.5rem;
+}
+
+/* FAQ Accordion */
+.accordion {
+    margin-top: 2rem;
+}
+
+.accordion-item {
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    padding: 1.5rem;
+    background-color: rgba(40, 40, 40, 0.5);
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+    padding: 1.5rem;
+    max-height: 500px;
+}
+
+.accordion-item.active .accordion-header i {
+    transform: rotate(180deg);
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Purchase Section */
+.purchase-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 2rem;
+}
+
+.purchase-options, .order-summary {
+    background-color: rgba(40, 40, 40, 0.5);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.purchase-options h3, .order-summary h3 {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.radio-option {
+    display: flex;
+    cursor: pointer;
+    gap: 1rem;
+}
+
+.radio-btn {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 8px;
+    flex-shrink: 0;
+}
+
+.radio-option.active .radio-btn {
+    border-color: var(--primary-color);
+}
+
+.radio-option.active .radio-btn::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.radio-content {
+    flex: 1;
+}
+
+.radio-content label {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.radio-content p {
+    color: #aaa;
+    margin: 0.5rem 0;
+}
+
+.price {
+    color: var(--primary-color);
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+.feature i {
+    color: var(--primary-color);
+}
+
+.summary-content {
+    margin-bottom: 1.5rem;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.summary-row:last-child {
+    margin-bottom: 0;
+}
+
+.total-row {
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.highlight-price {
+    color: var(--primary-color);
+}
+
+.purchase-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 1rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--darker-bg);
+    padding: 2rem 0;
+    text-align: center;
+    color: #888;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .section-grid,
+    .author-section,
+    .purchase-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #111;
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+        border-top: 1px solid #333;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+}
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">דיכאון כמתנה</a>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#about">על הספר</a></li>
+                    <li><a href="#chapters">תוכן הספר</a></li>
+                    <li><a href="#author">על המחבר</a></li>
+                    <li><a href="#faq">שאלות נפוצות</a></li>
+                    <li><a href="#purchase" class="btn-primary">רכישה</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="book-cover">
+                    <div class="book-cover-inner">
+                              <img
+        src="images/Kricha.jpg"
+        alt="דכאון כמתנה כריכה"
+        class="h-24 w-24 object-cover" />
+                    </div>
+                </div>
+                <h1 class="fade-in">דיכאון כמתנה</h1>
+                <p class="subtitle fade-in delay-1">מסע מרתק מהחושך אל האור: איך לצמוח ולהתפתח מתוך הדיכאון</p>
+                <div class="hero-buttons fade-in delay-2">
+                    <a href="#purchase" class="btn-primary">רכישת הספר</a>
+                    <a href="#chapters" class="btn-secondary">תוכן הספר</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-grid">
+                <div class="section-content">
+                    <h2>מה תמצאו בספר?</h2>
+                    <p>הספר 'דיכאון כמתנה' מציע מבט חדש ומהפכני על דיכאון. במקום לראות בו רק מחלה או מצב קשה, הספר מזמין אותך לגלות איך הדיכאון יכול להיות הזדמנות לצמיחה, התפתחות אישית והתעוררות.</p>
+                    <p>דרך שילוב של תובנות פסיכולוגיות, תרגילים מעשיים וסיפורים אישיים, הספר מעניק כלים קונקרטיים להתמודדות עם דיכאון ולהפיכתו למנוף לחיים טובים יותר.</p>
+                </div>
+                <div class="section-image">
+                    <img src="https://images.unsplash.com/photo-1602665742701-389671bc40c3?auto=format&fit=crop&q=80&w=2340&ixlib=rb-4.0.3" alt="מה תמצאו בספר">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-dark">
+        <div class="container">
+            <div class="section-grid reverse">
+                <div class="section-content">
+                    <h2>למה דיכאון יכול להיות מתנה?</h2>
+                    <p>דיכאון, למרות הקושי הרב שהוא מביא עמו, הוא גם הזדמנות להתבוננות עמוקה בחיינו. הוא מאלץ אותנו לעצור, להקשיב פנימה ולבחון מחדש את הערכים, המטרות והבחירות שלנו.</p>
+                    <p>בספר אני מציג איך דרך ההתמודדות עם הדיכאון אפשר לגלות חוזקות שלא ידענו שיש לנו, לפתח חמלה עצמית, ליצור סדרי עדיפויות חדשים ובסופו של דבר - לחיות חיים אותנטיים ומלאי משמעות יותר.</p>
+                </div>
+                <div class="section-image">
+                    <img src="https://images.unsplash.com/photo-1594970461669-9745509ae6b9?auto=format&fit=crop&q=80&w=2187&ixlib=rb-4.0.3" alt="למה דיכאון יכול להיות מתנה">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-grid">
+                <div class="section-content">
+                    <h2>למי הספר מיועד?</h2>
+                    <p>הספר מיועד למגוון רחב של אנשים:</p>
+                    <ul>
+                        <li>אנשים המתמודדים עם דיכאון או חרדה</li>
+                        <li>בני משפחה וחברים של אנשים המתמודדים עם מצבים אלה</li>
+                        <li>מטפלים ואנשי מקצוע בתחום בריאות הנפש</li>
+                        <li>כל מי שמעוניין לפתח חוסן נפשי ולמצוא משמעות גם בתוך אתגרים</li>
+                    </ul>
+                    <p>הגישה בספר מתאימה לאנשים בכל גיל ורקע, והכלים המעשיים שבו ניתנים ליישום מיידי.</p>
+                </div>
+                <div class="section-image">
+                    <img src="https://images.unsplash.com/photo-1573511860302-28c524319d2a?auto=format&fit=crop&q=80&w=2187&ixlib=rb-4.0.3" alt="למי הספר מיועד">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="author" class="section bg-dark">
+        <div class="container">
+            <div class="author-section">
+                <div class="author-image">
+                    <div class="author-avatar">
+                        <span>תמונת המחבר</span>
+                    </div>
+                </div>
+                <div class="author-content">
+                    <h2>על המחבר</h2>
+                    <p>אני מטפל ומנחה קבוצות מזה 15 שנה. התמודדתי בעצמי עם דיכאון קליני ומצאתי דרך לצמוח מתוכו ולהפוך את החוויה הקשה למנוף לחיים עשירים ומלאי משמעות.</p>
+                    <p>בעבודתי עם מאות אנשים בשנים האחרונות, פיתחתי שיטה ייחודית המאפשרת לראות את הדיכאון מזווית אחרת - כמתנה וכהזדמנות לצמיחה אישית.</p>
+                    <p>הספר "דיכאון כמתנה" הוא תמצית הידע והניסיון שצברתי, מוגש בצורה פשוטה ומעשית שתאפשר לך להתחיל בתהליך הריפוי שלך כבר היום.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="chapters" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>תוכן הספר</h2>
+                <p>עשרה פרקים מעשיים שיובילו אותך מהחושך אל האור</p>
+            </div>
+            
+            <div class="tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="tab1">פרקים 1-5</button>
+                    <button class="tab-button" data-tab="tab2">פרקים 6-10</button>
+                </div>
+                
+                <div class="tab-content active" id="tab1">
+                    <div class="chapters-list">
+                        <div class="chapter-card">
+                            <div class="chapter-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="chapter-details">
+                                <h3>פרק 1: הכרת החשכה: הבנת הדיכאון כתהליך טבעי</h3>
+                                <p>מבט חדש על דיכאון - לא כאויב אלא כמנגנון הגנה ואיתות לשינוי נדרש.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="chapter-card">
+                            <div class="chapter-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="chapter-details">
+                                <h3>פרק 2: להתיידד עם הצל: פיתוח קשר חדש עם הדיכאון</h3>
+                                <p>שיטות לקיים דיאלוג בונה עם הדיכאון והרגשות הקשים.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="chapter-card">
+                            <div class="chapter-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="chapter-details">
+                                <h3>פרק 3: הצעד הראשון אל האור: יצירת תשתית לשינוי</h3>
+                                <p>תרגילים מעשיים ליצירת בסיס יציב להתמודדות והחלמה.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="chapter-card">
+                            <div class="chapter-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="chapter-details">
+                                <h3>פרק 4: הכוח בפגיעות: חיזוק חוסן נפשי דרך קבלה עצמית</h3>
+                                <p>איך פגיעות והכרה במגבלות יכולות להפוך למקור של כוח.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="chapter-card">
+                            <div class="chapter-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="chapter-details">
+                                <h3>פרק 5: שינוי פרספקטיבה: חשיבה מחדש על סיפור חיינו</h3>
+                                <p>כלים לזיהוי ושינוי דפוסי חשיבה שליליים והחלפתם בנרטיב מעצים.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="tab2">
+                    <div class="chapters-list">
+                        <div class="chapter-card">
+                            <div class="chapter-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="chapter-details">
+                                <h3>פרק 6: המתנה שבגוף: חיבור מחדש לחוכמת הגוף</h3>
+                                <p>שיטות לשימוש בקשר גוף-נפש ככלי לריפוי והתחדשות.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="chapter-card">
+                            <div class="chapter-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="chapter-details">
+                                <h3>פרק 7: משמעות בתוך החושך: מציאת תכלית ומשמעות</h3>
+                                <p>איך למצוא ערך ותכלית דווקא בתוך החוויה הקשה של הדיכאון.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="chapter-card">
+                            <div class="chapter-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="chapter-details">
+                                <h3>פרק 8: יצירתיות כריפוי: ביטוי אמנותי ככלי להתמודדות</h3>
+                                <p>תרגילי יצירה וביטוי אמנותי שעוזרים לבטא ולעבד רגשות מורכבים.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="chapter-card">
+                            <div class="chapter-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="chapter-details">
+                                <h3>פרק 9: מעגלי תמיכה: בניית מערכות יחסים מרפאות</h3>
+                                <p>איך לבנות ולטפח מערכות יחסים שתומכות בהחלמה ובצמיחה אישית.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="chapter-card">
+                            <div class="chapter-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="chapter-details">
+                                <h3>פרק 10: מעבר להחלמה: חיים שלמים אחרי דיכאון</h3>
+                                <p>תכנית פעולה מעשית לשימור הלמידה והצמיחה לאורך זמן.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>מה אומרים עלינו</h2>
+                <p>אנשים שקראו את הספר וחוו שינוי</p>
+            </div>
+            
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-right testimonial-icon"></i>
+                    <p>הספר הזה שינה לי את החיים. הצלחתי לראשונה להבין את הדיכאון שלי כמתנה אמיתית שנועדה לחזק אותי.</p>
+                    <h4>יעל כהן, תל אביב</h4>
+                </div>
+                
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-right testimonial-icon"></i>
+                    <p>זהו מדריך מעשי ורגיש למי שמתמודד עם דיכאון. הטכניקות שלמדתי פה הובילו אותי לפריצת דרך אמיתית.</p>
+                    <h4>יוסי לוי, ירושלים</h4>
+                </div>
+                
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-right testimonial-icon"></i>
+                    <p>כמטפלת, אני ממליצה על הספר הזה לכל המטופלים שלי. הגישה של המחבר היא רעננה ומלאת תקווה.</p>
+                    <h4>ד"ר שרה גולדשטיין, פסיכולוגית קלינית</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>שאלות נפוצות</h2>
+                <p>תשובות לשאלות הנפוצות ביותר</p>
+            </div>
+            
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        האם הספר מחליף טיפול מקצועי?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>לא. הספר מציע כלים משלימים שיכולים לתמוך בתהליך ההחלמה, אך אינו תחליף לטיפול פסיכולוגי, פסיכיאטרי או רפואי. במצבים של דיכאון קליני חשוב לפנות לאיש מקצוע מוסמך.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        האם הספר מתאים גם למי שלא סובל מדיכאון?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>בהחלט! הכלים והשיטות המוצגים בספר יכולים לסייע לכל אדם שרוצה לפתח חוסן נפשי, להתמודד טוב יותר עם אתגרים רגשיים, ולחיות חיים מודעים ומלאי משמעות יותר.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        מה ההבדל בין הגרסה הדיגיטלית לגרסה המודפסת?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>התוכן זהה בשתי הגרסאות. ההבדל העיקרי הוא בפורמט ובחוויית הקריאה. הגרסה הדיגיטלית (PDF) נשלחת מיד לאחר הרכישה וניתנת לקריאה על כל מכשיר. הגרסה המודפסת נשלחת אליך הביתה ומציעה חוויית קריאה מוחשית.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        האם יש אפשרות להחזר כספי אם הספר לא מתאים לי?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>כן, אנו מציעים מדיניות החזר כספי מלא תוך 14 יום מהרכישה, ללא שאלות וללא תנאים. אנחנו בטוחים שתמצאו ערך בספר, אך חשוב לנו שתהיו מרוצים מהרכישה.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        כמה זמן לוקח לספר המודפס להגיע?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>הספר נשלח תוך 1-2 ימי עסקים מרגע ההזמנה, וזמן המשלוח הוא 3-5 ימי עסקים נוספים (תלוי באזור המגורים). במקרה של עיכוב, צוות שירות הלקוחות שלנו ישמח לסייע.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>הצעד הראשון שלך לקראת חיים טובים יותר מתחיל כאן</h2>
+                <p>אל תתן לדיכאון להגדיר אותך. למד לראות בו הזדמנות לצמיחה והתפתחות.</p>
+                <a href="#purchase" class="btn-white">קבל את הספר עכשיו <i class="fas fa-arrow-left"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="purchase" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>רכישת הספר</h2>
+                <p>בחר את אפשרות הרכישה המתאימה לך</p>
+            </div>
+            
+            <div class="purchase-grid">
+                <div class="purchase-options">
+                    <h3><i class="fas fa-box"></i> אפשרויות רכישה</h3>
+                    
+                    <div class="radio-group">
+                        
+                        <div class="radio-option" data-price="94">
+                            <span class="radio-btn"></span>
+                            <div class="radio-content">
+                                <label>אספר מודפס באיסוף עצמי <span class="price">₪94</span></label>
+                                <p>האיסוף ייעשה מהכתובת נחליאלי 1 אשקלון</p>
+                                <div class="feature"><i class="fas fa-truck"></i> משלוח תוך 3-5 ימי עסקים</div>
+                            </div>
+                        </div>
+                        
+                        <div class="radio-option" data-price="119">
+                            <span class="radio-btn"></span>
+                            <div class="radio-content">
+                                <label>ספר מודפס + משלוח <span class="price">₪119</span></label>
+                                <div class="feature"><i class="fas fa-truck"></i> משלוח תוך 3-5 ימי עסקים</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="order-summary">
+                    <h3><i class="fas fa-credit-card"></i> סיכום הזמנה</h3>
+                    
+                    <div class="summary-content">
+                        <div class="summary-row">
+                            <span>מוצר:</span>
+                            <span id="product-name">גרסה דיגיטלית</span>
+                        </div>
+                        
+                        <div class="summary-row">
+                            <span>מחיר:</span>
+                            <span id="product-price">₪59</span>
+                        </div>
+                        
+                        <div class="summary-row delivery-row" style="display: none;">
+                            <span>משלוח:</span>
+                            <span>כלול במחיר</span>
+                        </div>
+                        
+                        <div class="summary-row total-row">
+                            <span>סה"כ:</span>
+                            <span id="total-price" class="highlight-price">₪59</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-purchase">לרכישה מאובטחת</button>
+                    <p class="purchase-note">התשלום מאובטח ומוצפן • אפשרות ביטול תוך 14 יום</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© כל הזכויות שמורות 2025</p>
+            <p>דיכאון כמתנה - מסע מהחושך אל האור</p>
+        </div>
+    </footer>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Toggle
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (menuBtn && navLinks) {
+        menuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            
+            // Toggle icon
+            const icon = menuBtn.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    }
+    
+    // Smooth Scrolling for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80, // Accounting for fixed header
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (navLinks && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    const icon = menuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
+        });
+    });
+    
+    // Tab Functionality
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    if (tabButtons.length && tabContents.length) {
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                button.classList.add('active');
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    }
+    
+    // Accordion Functionality
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    
+    if (accordionHeaders.length) {
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const accordionItem = header.parentElement;
+                accordionItem.classList.toggle('active');
+                
+                // Close other accordion items
+                const allItems = document.querySelectorAll('.accordion-item');
+                allItems.forEach(item => {
+                    if (item !== accordionItem) {
+                        item.classList.remove('active');
+                    }
+                });
+            });
+        });
+    }
+    
+    // Purchase Options
+    const radioOptions = document.querySelectorAll('.radio-option');
+    const productNameEl = document.getElementById('product-name');
+    const productPriceEl = document.getElementById('product-price');
+    const totalPriceEl = document.getElementById('total-price');
+    const deliveryRowEl = document.querySelector('.delivery-row');
+    
+    if (radioOptions.length && productNameEl && productPriceEl && totalPriceEl) {
+        radioOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                // Remove active class from all options
+                radioOptions.forEach(opt => opt.classList.remove('active'));
+                
+                // Add active class to clicked option
+                option.classList.add('active');
+                
+                // Update order summary
+                const price = option.getAttribute('data-price');
+                const optionText = option.querySelector('label').textContent.split('₪')[0].trim();
+                
+                productNameEl.textContent = optionText;
+                productPriceEl.textContent = `₪${price}`;
+                totalPriceEl.textContent = `₪${price}`;
+                
+                // Show/hide delivery row
+                if (optionText === 'גרסה דיגיטלית') {
+                    deliveryRowEl.style.display = 'none';
+                } else {
+                    deliveryRowEl.style.display = 'flex';
+                }
+            });
+        });
+    }
+    
+    // Purchase Button (placeholder functionality)
+    const purchaseBtn = document.querySelector('.btn-purchase');
+    
+    if (purchaseBtn) {
+        purchaseBtn.addEventListener('click', function() {
+            alert('מערכת הרכישה תהיה פעילה בקרוב. תודה על ההתעניינות!');
+        });
+    }
+});
+    </script>
+</body>
+</html>
