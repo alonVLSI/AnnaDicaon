@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animation Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <title>דיכאון כמתנה - מסע מהחושך אל האור</title>
     <style>
 /* Global & Reset */
@@ -649,6 +659,39 @@ p {
     .section-header h2 {
         font-size: 1.75rem;
     }
+.chapter-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+
+.btn-white {
+  display: inline-block;
+  background-color: white;
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 1.1em;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+.btn-white:hover {
+  background-color: #f5f5f5;
+}
+
+.btn-white i {
+  margin-right: 6px;
+}
+.chapter-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* מרכז את כל התוכן אופקית */
+    text-align: center;
+}
+
 }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -684,11 +727,11 @@ p {
                               <img
         src="images/Kricha.jpg"
         alt="דכאון כמתנה כריכה"
-        class="h-24 w-24 object-cover" />
+        class="object-cover" />
                     </div>
                 </div>
                 <h1 class="fade-in">דיכאון כמתנה</h1>
-                <p class="subtitle fade-in delay-1">מסע מרתק מהחושך אל האור: איך לצמוח ולהתפתח מתוך הדיכאון</p>
+                <p class="subtitle fade-in delay-1">תופעות הלוואי של מתנת החזרה לחיים</p>
                 <div class="hero-buttons fade-in delay-2">
                     <a href="#purchase" class="btn-primary">רכישת הספר</a>
                     <a href="#chapters" class="btn-secondary">תוכן הספר</a>
@@ -702,11 +745,17 @@ p {
             <div class="section-grid">
                 <div class="section-content">
                     <h2>מה תמצאו בספר?</h2>
-                    <p>הספר 'דיכאון כמתנה' מציע מבט חדש ומהפכני על דיכאון. במקום לראות בו רק מחלה או מצב קשה, הספר מזמין אותך לגלות איך הדיכאון יכול להיות הזדמנות לצמיחה, התפתחות אישית והתעוררות.</p>
-                    <p>דרך שילוב של תובנות פסיכולוגיות, תרגילים מעשיים וסיפורים אישיים, הספר מעניק כלים קונקרטיים להתמודדות עם דיכאון ולהפיכתו למנוף לחיים טובים יותר.</p>
+                    <p>יציאה מהעצבות הפנימית, מחוסר השקט המורגש בכל הגוף, מהלופ של הייאוש, מחוסר האונים, מחוסר החשק לעשות דברים, לפעול לצאת, לחוש הנאה, לצאת מהלופ של הקשיים בחשיבה, מהשנאה, מהבושה, מהשפיטה ומהאשמה, מהכעס ומאובדן התקווה
+ מעולם לא היתה נגישה יותר
+והיום יותר מתמיד נמצאת בהישג יד.
+</p>
+                    <p>אני כל כך מתרגשת להשיק לראשונה את הספר "דיכאון כמתנה", ספר שמעבר לשינוי המטורף שהוא מעביר את כל האוחזים בו, הוא הישועה הפרטית שלי וכולי תקווה שבקרוב גם שלכם.</p>
                 </div>
                 <div class="section-image">
-                    <img src="https://images.unsplash.com/photo-1602665742701-389671bc40c3?auto=format&fit=crop&q=80&w=2340&ixlib=rb-4.0.3" alt="מה תמצאו בספר">
+                              <img
+        src="images/FlyingBirds.JPG"
+        alt="ציפורים עפות"
+        class="h-150 w-150 object-cover" />					
                 </div>
             </div>
         </div>
@@ -716,12 +765,14 @@ p {
         <div class="container">
             <div class="section-grid reverse">
                 <div class="section-content">
-                    <h2>למה דיכאון יכול להיות מתנה?</h2>
-                    <p>דיכאון, למרות הקושי הרב שהוא מביא עמו, הוא גם הזדמנות להתבוננות עמוקה בחיינו. הוא מאלץ אותנו לעצור, להקשיב פנימה ולבחון מחדש את הערכים, המטרות והבחירות שלנו.</p>
-                    <p>בספר אני מציג איך דרך ההתמודדות עם הדיכאון אפשר לגלות חוזקות שלא ידענו שיש לנו, לפתח חמלה עצמית, ליצור סדרי עדיפויות חדשים ובסופו של דבר - לחיות חיים אותנטיים ומלאי משמעות יותר.</p>
+                    <h2>הנוסחה שצמחה מתוך הכאב</h2>
+                    <p>את כל הדרך שעברתי, כל השיעורים שלמדתי, כל טיפ שעזר לי, כל מורה דרך שחידש לי, כל הידע שצברתי וכל מה שצריך כדי לקום מהדיכאון ריכזתי בספר אחד שמכיל בתוכו את הנוסחה המדויקת. </p>
                 </div>
                 <div class="section-image">
-                    <img src="https://images.unsplash.com/photo-1594970461669-9745509ae6b9?auto=format&fit=crop&q=80&w=2187&ixlib=rb-4.0.3" alt="למה דיכאון יכול להיות מתנה">
+                              <img
+        src="images/GrowFromPain.JPG"
+        alt="ציפורים עפות"
+        class="h-150 w-150 object-cover" />					
                 </div>
             </div>
         </div>
@@ -731,36 +782,54 @@ p {
         <div class="container">
             <div class="section-grid">
                 <div class="section-content">
-                    <h2>למי הספר מיועד?</h2>
-                    <p>הספר מיועד למגוון רחב של אנשים:</p>
                     <ul>
-                        <li>אנשים המתמודדים עם דיכאון או חרדה</li>
-                        <li>בני משפחה וחברים של אנשים המתמודדים עם מצבים אלה</li>
-                        <li>מטפלים ואנשי מקצוע בתחום בריאות הנפש</li>
-                        <li>כל מי שמעוניין לפתח חוסן נפשי ולמצוא משמעות גם בתוך אתגרים</li>
+                        <li>אז רגע לפני שאתם מקבלים את ההחלטה שלאחריה החיים שלכם לא הולכים לחזור להיות אותו הדבר</li>
+                        <li>אני רוצה לומר תודה – תודה על ההזדמנות לחשוף בפניכם מציאות חדשה,</li>
+                        <li>תודה על שלא ויתרתם לעצמכם </li>
+                        <li>ותודה על שלמרות התחושות הקשות עדיין בחרתם לתת הזדמנות לשינוי המציאות.</li>
                     </ul>
                     <p>הגישה בספר מתאימה לאנשים בכל גיל ורקע, והכלים המעשיים שבו ניתנים ליישום מיידי.</p>
+					<p>
+
                 </div>
                 <div class="section-image">
-                    <img src="https://images.unsplash.com/photo-1573511860302-28c524319d2a?auto=format&fit=crop&q=80&w=2187&ixlib=rb-4.0.3" alt="למי הספר מיועד">
+                              <img
+        src="images/Thanks.PNG"
+        alt="תודה ותקווה"
+        class="h-150 w-150 object-cover" />					
                 </div>
             </div>
         </div>
     </section>
-
+<section class="chapter-section">
+				<div class = "first-chapter" style="text-align: center;">
+				<p><strong>עדיין מתלבט/ת?</strong> <br>
+קרא/י את הפרק הראשון ותראה/י אם זה מדבר אליך.</p>
+				      <a class="btn-white" style="text-align: center;" id="FirstChapter"> הורד את הפרק הראשון  <i class="fas fa-gift"></i></a>
+				</div>
+</section>
     <section id="author" class="section bg-dark">
         <div class="container">
             <div class="author-section">
                 <div class="author-image">
                     <div class="author-avatar">
-                        <span>תמונת המחבר</span>
+        <div class="section-image">
+                              <img
+        src="images/Profile.JPG"
+        alt="המחבר"
+        class="h-36 w-36 rounded-full" />					
+                </div>
                     </div>
                 </div>
+
                 <div class="author-content">
-                    <h2>על המחבר</h2>
-                    <p>אני מטפל ומנחה קבוצות מזה 15 שנה. התמודדתי בעצמי עם דיכאון קליני ומצאתי דרך לצמוח מתוכו ולהפוך את החוויה הקשה למנוף לחיים עשירים ומלאי משמעות.</p>
-                    <p>בעבודתי עם מאות אנשים בשנים האחרונות, פיתחתי שיטה ייחודית המאפשרת לראות את הדיכאון מזווית אחרת - כמתנה וכהזדמנות לצמיחה אישית.</p>
-                    <p>הספר "דיכאון כמתנה" הוא תמצית הידע והניסיון שצברתי, מוגש בצורה פשוטה ומעשית שתאפשר לך להתחיל בתהליך הריפוי שלך כבר היום.</p>
+                    <h2>על המחברת</h2>
+                    <p>זו הייתה התקופה הכי גרועה בחיי. הייתי שבויה עמוק בתוך דפוסי חשיבה שליליים, חוויתי התפרצויות בכי והתקפי הרס עצמי שפגעו גם בי וגם בסביבה שלי. </p>
+                    <p>פניתי למטפלים שונים, מפסיכיאטרים ופסיכולוגים ועד רבנים ומדריכים רוחניים, וכולם אמרו לי שהשובות נמצאות בתוכי. לא ידעתי איך למצוא אותן ואף אחד לא נתן לי פתרונות. התסכול היה עצום.</p>
+                    <p>בעיצומו של התקף דיכאון ואחרי ניסיונות טיפול ואנשים שלא השיגו תוצאות, החליטה אנה שביט סער פשוט לכתוב.</p>
+					<p> בכל פעם שהיד היא פנתה אל המקלדת ושפכה את ליבה, כתבה וכתבה מבלי לקרוא עד שהוקל לה.</p>
+					<p> כך עשתה במשך שבועות, ובכל פעם שכתבה הרגישה שהדשים הכלואים בתוכה משתחררים ומתפוגגים. מרחק הזמן, כאשר קראה את המילים שכתבה, הבינה שהשובות נמצאות לפניה.</p>
+
                 </div>
             </div>
         </div>
@@ -786,8 +855,12 @@ p {
                                 <i class="fas fa-book"></i>
                             </div>
                             <div class="chapter-details">
-                                <h3>פרק 1: הכרת החשכה: הבנת הדיכאון כתהליך טבעי</h3>
-                                <p>מבט חדש על דיכאון - לא כאויב אלא כמנגנון הגנה ואיתות לשינוי נדרש.</p>
+                                <h3>פרק 1: נקודת פתיחה</h3>
+                                <p>המקום שממנו הגעתי והמצוקה הנפשית שלי</p>
+    <div class="chapter-btn-wrapper" style = " text-align: center;">
+
+				      <a class="btn-white" style="text-align: center;" id="FirstChapter"> הורד את הפרק הראשון ב- <i class="fas fa-gift"></i></a>
+</div>
                             </div>
                         </div>
                         
@@ -796,8 +869,8 @@ p {
                                 <i class="fas fa-book"></i>
                             </div>
                             <div class="chapter-details">
-                                <h3>פרק 2: להתיידד עם הצל: פיתוח קשר חדש עם הדיכאון</h3>
-                                <p>שיטות לקיים דיאלוג בונה עם הדיכאון והרגשות הקשים.</p>
+                                <h3>פרק 2: הבנת הדיכאון</h3>
+                                <p>הפרדה, תסמינים, רגע של התבוננות וטיפול תרופתי</p>
                             </div>
                         </div>
                         
@@ -806,8 +879,8 @@ p {
                                 <i class="fas fa-book"></i>
                             </div>
                             <div class="chapter-details">
-                                <h3>פרק 3: הצעד הראשון אל האור: יצירת תשתית לשינוי</h3>
-                                <p>תרגילים מעשיים ליצירת בסיס יציב להתמודדות והחלמה.</p>
+                                <h3>פרק 3: נקודת מפנה</h3>
+                                <p>מודעות ותת מודע</p>
                             </div>
                         </div>
                         
@@ -816,8 +889,8 @@ p {
                                 <i class="fas fa-book"></i>
                             </div>
                             <div class="chapter-details">
-                                <h3>פרק 4: הכוח בפגיעות: חיזוק חוסן נפשי דרך קבלה עצמית</h3>
-                                <p>איך פגיעות והכרה במגבלות יכולות להפוך למקור של כוח.</p>
+                                <h3>פרק 4:  המוקשים שמהם צריך להימנע</h3>
+                                <p>שיפוט עצמי, כעס עצמי,רחמים עצמיים, שמירת דברים בבטן,קבלת החלטות,הרס עצמי</p>
                             </div>
                         </div>
                         
@@ -826,8 +899,8 @@ p {
                                 <i class="fas fa-book"></i>
                             </div>
                             <div class="chapter-details">
-                                <h3>פרק 5: שינוי פרספקטיבה: חשיבה מחדש על סיפור חיינו</h3>
-                                <p>כלים לזיהוי ושינוי דפוסי חשיבה שליליים והחלפתם בנרטיב מעצים.</p>
+                                <h3>פרק 5: עשה ואל תעשה</h3>
+                                <p>הזדהות,בריחה,דמיון מודרך,התנגדות והדחקה,דחיינות</p>
                             </div>
                         </div>
                     </div>
@@ -840,8 +913,8 @@ p {
                                 <i class="fas fa-book"></i>
                             </div>
                             <div class="chapter-details">
-                                <h3>פרק 6: המתנה שבגוף: חיבור מחדש לחוכמת הגוף</h3>
-                                <p>שיטות לשימוש בקשר גוף-נפש ככלי לריפוי והתחדשות.</p>
+                                <h3>פרק 6: שינוי תפיסה</h3>
+                                <p>דיכאון כמתנה,אחיזה בדיכאון ממקום שגוי</p>
                             </div>
                         </div>
                         
@@ -850,8 +923,8 @@ p {
                                 <i class="fas fa-book"></i>
                             </div>
                             <div class="chapter-details">
-                                <h3>פרק 7: משמעות בתוך החושך: מציאת תכלית ומשמעות</h3>
-                                <p>איך למצוא ערך ותכלית דווקא בתוך החוויה הקשה של הדיכאון.</p>
+                                <h3>פרק 7:  תקווה חדשה</h3>
+                                <p>נטיות אובדניות,החללטה לבצע שינוי,שאריות הדיכאון, התניה</p>
                             </div>
                         </div>
                         
@@ -860,8 +933,8 @@ p {
                                 <i class="fas fa-book"></i>
                             </div>
                             <div class="chapter-details">
-                                <h3>פרק 8: יצירתיות כריפוי: ביטוי אמנותי ככלי להתמודדות</h3>
-                                <p>תרגילי יצירה וביטוי אמנותי שעוזרים לבטא ולעבד רגשות מורכבים.</p>
+                                <h3>פרק 8: את/ה בתפקיד המטפל/ת שלך</h3>
+                                <p>להשלים עם העבר, חשבון נפש</p>
                             </div>
                         </div>
                         
@@ -870,8 +943,8 @@ p {
                                 <i class="fas fa-book"></i>
                             </div>
                             <div class="chapter-details">
-                                <h3>פרק 9: מעגלי תמיכה: בניית מערכות יחסים מרפאות</h3>
-                                <p>איך לבנות ולטפח מערכות יחסים שתומכות בהחלמה ובצמיחה אישית.</p>
+                                <h3>פרק 9: התמודדות מבפנים ומבחוץ</h3>
+                                <p>אמונה שגויה, משל הגלים,ההשפעה שלנו על הסביבה, ולהפך</p>
                             </div>
                         </div>
                         
@@ -880,8 +953,8 @@ p {
                                 <i class="fas fa-book"></i>
                             </div>
                             <div class="chapter-details">
-                                <h3>פרק 10: מעבר להחלמה: חיים שלמים אחרי דיכאון</h3>
-                                <p>תכנית פעולה מעשית לשימור הלמידה והצמיחה לאורך זמן.</p>
+                                <h3>פרק 10:  דיכאון כנקודת פתיחה</h3>
+                                <p>היום שאחרי, ממני אליכם, תודות</p>
                             </div>
                         </div>
                     </div>
@@ -929,14 +1002,23 @@ p {
             <div class="accordion">
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        האם הספר מחליף טיפול מקצועי?
+                        איך אדע אם הספר מתאים לי?
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="accordion-content">
-                        <p>לא. הספר מציע כלים משלימים שיכולים לתמוך בתהליך ההחלמה, אך אינו תחליף לטיפול פסיכולוגי, פסיכיאטרי או רפואי. במצבים של דיכאון קליני חשוב לפנות לאיש מקצוע מוסמך.</p>
+                        <p>הספר מתאים במיוחד למי שנמצא בדיכאון או חווה קושי נפשי ומחפש כלים להתמודד עם המצב ולצאת לדרך חדשה. הספר נכתב כמדריך מעשי שמכיל תובנות אישיות, ידע מעמיק על הדיכאון, דרכים להימנע ממוקשים רגשיים וכלים לשינוי תפיסה ובניית תקווה. כולי אמונה שגם אדם שלא חווה דיכאון יוכל להפיק ממנו ערך רב שיסייע לו לתמוך בעצמו או באחרים.</p>
                     </div>
                 </div>
-                
+                   <div class="accordion-item">
+                    <div class="accordion-header">
+                       האם הספר מחליף טיפול?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>הספר אינו מתיימר להחליף טיפול זה או אחר ולספק פתרונות למצבים קליניים, אך יש בו כוח לחולל שינוי אמיתי בחייהם של מתמודדי הנפש. רבים ימצאו בו נחמה ויכולת להבין טוב יותר את המתחולל בתוכם.</p>
+                    </div>
+                </div>
+
                 <div class="accordion-item">
                     <div class="accordion-header">
                         האם הספר מתאים גם למי שלא סובל מדיכאון?
@@ -947,33 +1029,35 @@ p {
                     </div>
                 </div>
                 
+                
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        מה ההבדל בין הגרסה הדיגיטלית לגרסה המודפסת?
+                        תוך כמה זמן אקבל את הספר?
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="accordion-content">
-                        <p>התוכן זהה בשתי הגרסאות. ההבדל העיקרי הוא בפורמט ובחוויית הקריאה. הגרסה הדיגיטלית (PDF) נשלחת מיד לאחר הרכישה וניתנת לקריאה על כל מכשיר. הגרסה המודפסת נשלחת אליך הביתה ומציעה חוויית קריאה מוחשית.</p>
+                        <p>עד 7 ימים מרגע ההזמנה.</p>
                     </div>
                 </div>
                 
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        האם יש אפשרות להחזר כספי אם הספר לא מתאים לי?
+                       האם יש אופציה לרכוש דרך סניף?
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="accordion-content">
-                        <p>כן, אנו מציעים מדיניות החזר כספי מלא תוך 14 יום מהרכישה, ללא שאלות וללא תנאים. אנחנו בטוחים שתמצאו ערך בספר, אך חשוב לנו שתהיו מרוצים מהרכישה.</p>
+                        <p>כרגע ניתן לרכוש את הספר רק דרך האתר♥.</p>
                     </div>
-                </div>
-                
+					
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        כמה זמן לוקח לספר המודפס להגיע?
+                       האם הספר כתוב בצורה שתהיה נגישה גם למי שאינו קורא הרבה?
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="accordion-content">
-                        <p>הספר נשלח תוך 1-2 ימי עסקים מרגע ההזמנה, וזמן המשלוח הוא 3-5 ימי עסקים נוספים (תלוי באזור המגורים). במקרה של עיכוב, צוות שירות הלקוחות שלנו ישמח לסייע.</p>
+                        <p>האם הספר כתוב בצורה שתהיה נגישה גם למי שאינו קורא הרבה?
+כן, הספר כתוב בצורה קלה ונגישה, אך יש בו תובנות שידרשו ממך להתרכז ולשאול את עצמך שאלות, והוא דורש ממך לשבת ולעסוק בחקירה עצמית. עם זאת, זה ספר שמתאים גם למי שלא קורא הרבה או בכלל.
+</p>
                     </div>
                 </div>
             </div>
@@ -1003,20 +1087,29 @@ p {
                     
                     <div class="radio-group">
                         
-                        <div class="radio-option" data-price="94">
-                            <span class="radio-btn"></span>
-                            <div class="radio-content">
-                                <label>אספר מודפס באיסוף עצמי <span class="price">₪94</span></label>
-                                <p>האיסוף ייעשה מהכתובת נחליאלי 1 אשקלון</p>
-                                <div class="feature"><i class="fas fa-truck"></i> משלוח תוך 3-5 ימי עסקים</div>
-                            </div>
-                        </div>
+                       <div class="radio-option active" data-price="94">
+  <span class="radio-btn"></span>
+  <div class="radio-content">
+    <label>איסוף עצמי <span class="price">₪94</span></label>
+    
+    
+    <!-- תפריט כתובות -->
+    <div class="pickup-location">
+      <label for="pickup-select">בחר כתובת איסוף:</label>
+      <select id="pickup-select" name="pickup-location" class = "text-black rounded-md">
+        <option value="tel-aviv" class = "text-black">תל אביב - אבן גבירול 123</option>
+        <option value="jerusalem" class = "text-black">אשקלון - אהוד 2</option>
+      </select>
+    </div>
+  </div>
+</div>
+
                         
                         <div class="radio-option" data-price="119">
                             <span class="radio-btn"></span>
                             <div class="radio-content">
-                                <label>ספר מודפס + משלוח <span class="price">₪119</span></label>
-                                <div class="feature"><i class="fas fa-truck"></i> משלוח תוך 3-5 ימי עסקים</div>
+                                <label>משלוח עד הבית<span class="price">₪119</span></label>
+							<div class="feature"><i class="fas fa-truck"></i> משלוח עד 14 ימי עסקים</div>
                             </div>
                         </div>
                     </div>
@@ -1028,22 +1121,22 @@ p {
                     <div class="summary-content">
                         <div class="summary-row">
                             <span>מוצר:</span>
-                            <span id="product-name">גרסה דיגיטלית</span>
+                            <span id="product-name">ספר מודפס</span>
                         </div>
                         
                         <div class="summary-row">
                             <span>מחיר:</span>
-                            <span id="product-price">₪59</span>
+                            <span id="product-price">₪94</span>
                         </div>
                         
                         <div class="summary-row delivery-row" style="display: none;">
                             <span>משלוח:</span>
-                            <span>כלול במחיר</span>
+                            <span>₪25</span>
                         </div>
                         
                         <div class="summary-row total-row">
                             <span>סה"כ:</span>
-                            <span id="total-price" class="highlight-price">₪59</span>
+                            <span id="total-price" class="highlight-price">₪94</span>
                         </div>
                     </div>
                     
@@ -1172,7 +1265,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 totalPriceEl.textContent = `₪${price}`;
                 
                 // Show/hide delivery row
-                if (optionText === 'גרסה דיגיטלית') {
+                if (optionText === 'איסוף עצמי') {
                     deliveryRowEl.style.display = 'none';
                 } else {
                     deliveryRowEl.style.display = 'flex';
