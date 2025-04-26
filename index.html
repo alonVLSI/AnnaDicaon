@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>דיכאון כמתנה - הספר שילווה אתכם בדרך להחלמה</title>
+    <!-- Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,15 +15,15 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<meta name="description" content="אסי גרינברג, מטפלת רגשית מוסמכת בשיטות CBT ו-EMDR. טיפול אישי, חם ומכיל – לפתח תקווה חדשה ונפש רגועה. צרו קשר עוד היום.">
+<meta name="keywords" content="טיפול רגשי, אסי גרינברג, CBT, EMDR, פסיכותרפיה, טיפול בחרדה, טיפול אישי, מטפלת רגשית, טיפול לנשים">
+<meta property="og:title" content="אסי גרינברג, מטפלת רגשית בשיטות CBT ו-EMDR">
+<meta property="og:description" content="טיפול רגשי חם ומקצועי לנשים. גלו כלים מעשיים להתמודדות וצמיחה רגשית.">
+<meta property="og:url" content="https://assicbt.netlify.app/">
+<meta property="og:type" content="website">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>דיכאון כמתנה - מסע מהחושך אל האור</title>
     <style>
-/* Global & Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 :root {
     --primary-color: #20b2aa; /* Teal/Turquoise */
     --primary-dark: #178f89;
@@ -34,6 +36,7 @@
     --border-color: #2a2a2a;
     --card-bg: rgba(30, 30, 30, 0.5);
 }
+ 
 
 body {
     font-family: 'Heebo', sans-serif;
@@ -192,7 +195,12 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, rgba(32, 178, 170, 0.2), transparent);
+        background-image: url('images/PurpleBackground.JPG'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
     z-index: 1;
 }
 
@@ -301,8 +309,8 @@ p {
 }
 
 .author-avatar {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     background-color: var(--primary-dark);
     border: 4px solid var(--primary-color);
@@ -593,25 +601,6 @@ p {
     color: #888;
 }
 
-/* Animations */
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-}
-
-.delay-1 {
-    animation-delay: 0.2s;
-}
-
-.delay-2 {
-    animation-delay: 0.4s;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
 /* Media Queries */
 @media (max-width: 992px) {
     .section-grid,
@@ -691,8 +680,221 @@ p {
     align-items: center; /* מרכז את כל התוכן אופקית */
     text-align: center;
 }
-
+.hero-book {
+    background-image: url('images/PurpleBackground.JPG'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
+        /* Animation classes */
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .slide-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .slide-up.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .slide-right {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .slide-right.appear {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .slide-left {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .slide-left.appear {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        .fade-in.appear {
+            opacity: 1;
+        }
+        
+        .zoom-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.8s ease-out;
+        }
+        
+        .zoom-in.appear {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .bounce {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .staggered-animation li {
+            opacity: 0;
+            transform: translateX(20px);
+            transition: all 0.5s ease;
+        }
+        
+        .staggered-animation li.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+.glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 
+      0 0 5px #fb923c, /* כתום בהיר - orange-400 */
+      0 0 10px #fb923c, 
+      0 0 15px #f97316, /* כתום - orange-500 */
+      0 0 20px #f97316;
+  }
+  to {
+    text-shadow: 
+      0 0 10px #fb923c, 
+      0 0 20px #fb923c, 
+      0 0 30px #f97316, 
+      0 0 40px #f97316;
+  }
+}
+
+
+
+        
+        .gradient-text {
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+        
+@keyframes heartBeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* משנה את הגודל בצורה חלקה */
+    }
+}
+
+.heart-beat {
+    animation: heartBeat 1.2s ease-in-out infinite;
+    display: inline-block;
+	transform-origin: center; /* לוודא שהשינוי יקרה ממוקד האלמנט */
+}
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    14% { transform: scale(1.1); } /* היה 1.2 */
+    28% { transform: scale(1); }
+    42% { transform: scale(1.1); } /* היה 1.2 */
+    70% { transform: scale(1); }
+}
+        
+        
+        @keyframes scrollAnim {
+            0% { top: 10px; opacity: 1; }
+            100% { top: 30px; opacity: 0; }
+        }
+        
+        /* Enhanced backgrounds */
+        .bg-pattern {
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23b6e6a2' fill-opacity='0.1'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .bg-gradient {
+            background: linear-gradient(135deg, rgba(182, 230, 162, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+        }
+        
+        /* Arrow list styling */
+        .arrow-list li {
+            position: relative;
+            padding-right: 2rem;
+        }
+        
+        .arrow-list li::before {
+            content: "➤";
+            position: absolute;
+            right: 0;
+            color: #25D366;
+            transition: all 0.3s ease;
+        }
+        
+        .arrow-list li:hover::before {
+            transform: translateX(-5px);
+            color: #128C7E;
+        }
+        
+.typing-effect {
+    border-right: 3px solid;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(30, end) forwards, blink 0.5s step-end infinite;
+}
+
+/* הקלדה */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* הבהוב של הסמן */
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+/* אחרי 3 שניות - הסר את הסמן */
+.typing-finished {
+    border-right: none;
+}
+
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -721,45 +923,60 @@ p {
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="container">
-            <div class="hero-content">
+            <div class="hero-content hero-book">
                 <div class="book-cover">
                     <div class="book-cover-inner">
                               <img
         src="images/Kricha.jpg"
-        alt="דכאון כמתנה כריכה"
+        alt="דיכאון כמתנה כריכה"
         class="object-cover" />
                     </div>
                 </div>
-                <h1 class="fade-in">דיכאון כמתנה</h1>
-                <p class="subtitle fade-in delay-1">תופעות הלוואי של מתנת החזרה לחיים</p>
-                <div class="hero-buttons fade-in delay-2">
-                    <a href="#purchase" class="btn-primary">רכישת הספר</a>
-                    <a href="#chapters" class="btn-secondary">תוכן הספר</a>
+                <h1 data-aos="fade-up">דיכאון כמתנה</h1>
+                <p class="subtitle"data-aos="fade-up" data-aos-delay="200">תופעות הלוואי של מתנת החזרה לחיים</p>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#purchase" class="btn-primary" data-aos="fade-in" data-aos-delay="200">רכישת הספר</a>
+                    <a href="#chapters" class="btn-secondary" data-aos="fade-in" data-aos-delay="200">תוכן הספר</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-grid">
-                <div class="section-content">
-                    <h2>מה תמצאו בספר?</h2>
-                    <p>יציאה מהעצבות הפנימית, מחוסר השקט המורגש בכל הגוף, מהלופ של הייאוש, מחוסר האונים, מחוסר החשק לעשות דברים, לפעול לצאת, לחוש הנאה, לצאת מהלופ של הקשיים בחשיבה, מהשנאה, מהבושה, מהשפיטה ומהאשמה, מהכעס ומאובדן התקווה
- מעולם לא היתה נגישה יותר
-והיום יותר מתמיד נמצאת בהישג יד.
-</p>
-                    <p>אני כל כך מתרגשת להשיק לראשונה את הספר "דיכאון כמתנה", ספר שמעבר לשינוי המטורף שהוא מעביר את כל האוחזים בו, הוא הישועה הפרטית שלי וכולי תקווה שבקרוב גם שלכם.</p>
-                </div>
-                <div class="section-image">
-                              <img
-        src="images/FlyingBirds.JPG"
-        alt="ציפורים עפות"
-        class="h-150 w-150 object-cover" />					
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="about" class="section py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="section-grid grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+      
+      <!-- תוכן -->
+      <div class="section-content space-y-6 text-right">
+        <h2 class="text-3xl md:text-4xl font-bold text-purple-700 typing-effect">
+          הדרך שלך להתחיל מחדש
+        </h2>
+
+        <p class="text-lg text-gray-700 fade-in delay-1">
+          לצאת מהעצבות העמוקה, מהשקט המתוח בגוף, מהלופ של הייאוש וחוסר החשק. להשתחרר מהשנאה, הבושה, השפיטה והכעס – ולהחזיר את התקווה.
+        </p>
+
+        <p class="text-lg text-gray-700 fade-in delay-2">
+          "דיכאון כמתנה" הופך את כל זה לנגיש יותר מאי פעם – הספר שיעזור לך לראות את האור ולחזור לחיים, בעדינות, שלב אחר שלב.
+        </p>
+
+        <p class="text-lg text-gray-700 fade-in delay-4">
+          זו לא רק קריאה – זו התחלה של מסע, עם כלים מעשיים ליישום מיידי, שמתאימים לכל גיל ולכל רקע.
+        </p>
+      </div>
+
+      <!-- תמונה -->
+      <div class="section-image animate-fade-in delay-1">
+        <img
+          src="images/FlyingBirds.JPG"
+          alt="ציפורים עפות"
+          class="rounded-2xl shadow-xl w-full object-cover max-h-[400px]"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <section class="section bg-dark">
         <div class="container">
@@ -817,13 +1034,13 @@ p {
                               <img
         src="images/Profile.JPG"
         alt="המחבר"
-        class="h-36 w-36 rounded-full" />					
+        class="h-60 w-60 rounded-full" />					
                 </div>
                     </div>
                 </div>
 
                 <div class="author-content">
-                    <h2>על המחברת</h2>
+                    <h2>תקציר הספר</h2>
                     <p>זו הייתה התקופה הכי גרועה בחיי. הייתי שבויה עמוק בתוך דפוסי חשיבה שליליים, חוויתי התפרצויות בכי והתקפי הרס עצמי שפגעו גם בי וגם בסביבה שלי. </p>
                     <p>פניתי למטפלים שונים, מפסיכיאטרים ופסיכולוגים ועד רבנים ומדריכים רוחניים, וכולם אמרו לי שהשובות נמצאות בתוכי. לא ידעתי איך למצוא אותן ואף אחד לא נתן לי פתרונות. התסכול היה עצום.</p>
                     <p>בעיצומו של התקף דיכאון ואחרי ניסיונות טיפול ואנשים שלא השיגו תוצאות, החליטה אנה שביט סער פשוט לכתוב.</p>
@@ -838,8 +1055,8 @@ p {
     <section id="chapters" class="section">
         <div class="container">
             <div class="section-header">
-                <h2>תוכן הספר</h2>
-                <p>עשרה פרקים מעשיים שיובילו אותך מהחושך אל האור</p>
+                <h2>תוכן עניינים</h2>
+                <p>עשרה פרקים בדרך להחלמה</p>
             </div>
             
             <div class="tabs">
@@ -857,10 +1074,7 @@ p {
                             <div class="chapter-details">
                                 <h3>פרק 1: נקודת פתיחה</h3>
                                 <p>המקום שממנו הגעתי והמצוקה הנפשית שלי</p>
-    <div class="chapter-btn-wrapper" style = " text-align: center;">
 
-				      <a class="btn-white" style="text-align: center;" id="FirstChapter"> הורד את הפרק הראשון ב- <i class="fas fa-gift"></i></a>
-</div>
                             </div>
                         </div>
                         
@@ -870,7 +1084,7 @@ p {
                             </div>
                             <div class="chapter-details">
                                 <h3>פרק 2: הבנת הדיכאון</h3>
-                                <p>הפרדה, תסמינים, רגע של התבוננות וטיפול תרופתי</p>
+                                <p>הפרדה<br> תסמינים<br> רגע של התבוננות וטיפול תרופתי</p>
                             </div>
                         </div>
                         
@@ -890,7 +1104,7 @@ p {
                             </div>
                             <div class="chapter-details">
                                 <h3>פרק 4:  המוקשים שמהם צריך להימנע</h3>
-                                <p>שיפוט עצמי, כעס עצמי,רחמים עצמיים, שמירת דברים בבטן,קבלת החלטות,הרס עצמי</p>
+                                <p>שיפוט עצמי<br> כעס עצמי<br>רחמים עצמיים<br> שמירת דברים בבטן<br>קבלת החלטות<br>הרס עצמי</p>
                             </div>
                         </div>
                         
@@ -900,7 +1114,7 @@ p {
                             </div>
                             <div class="chapter-details">
                                 <h3>פרק 5: עשה ואל תעשה</h3>
-                                <p>הזדהות,בריחה,דמיון מודרך,התנגדות והדחקה,דחיינות</p>
+                                <p>הזדהות<br>בריחה<br>דמיון מודרך<br>התנגדות והדחקה<br>דחיינות</p>
                             </div>
                         </div>
                     </div>
@@ -914,7 +1128,7 @@ p {
                             </div>
                             <div class="chapter-details">
                                 <h3>פרק 6: שינוי תפיסה</h3>
-                                <p>דיכאון כמתנה,אחיזה בדיכאון ממקום שגוי</p>
+                                <p>דיכאון כמתנה<br>אחיזה בדיכאון ממקום שגוי</p>
                             </div>
                         </div>
                         
@@ -924,7 +1138,7 @@ p {
                             </div>
                             <div class="chapter-details">
                                 <h3>פרק 7:  תקווה חדשה</h3>
-                                <p>נטיות אובדניות,החללטה לבצע שינוי,שאריות הדיכאון, התניה</p>
+                                <p>נטיות אובדניות<br>החללטה לבצע שינוי<br>שאריות הדיכאון<br> התניה</p>
                             </div>
                         </div>
                         
@@ -934,8 +1148,12 @@ p {
                             </div>
                             <div class="chapter-details">
                                 <h3>פרק 8: את/ה בתפקיד המטפל/ת שלך</h3>
-                                <p>להשלים עם העבר, חשבון נפש</p>
-                            </div>
+                                <p>להשלים עם העבר<br> חשבון נפש</p>
+                            </div
+    <div class="chapter-btn-wrapper" style = " text-align: center;">
+
+				      <a class="btn-white" style="text-align: center;" id="FirstChapter"> הורד את הפרק הראשון ב- <i class="fas fa-gift"></i></a>
+</div>
                         </div>
                         
                         <div class="chapter-card">
@@ -944,7 +1162,7 @@ p {
                             </div>
                             <div class="chapter-details">
                                 <h3>פרק 9: התמודדות מבפנים ומבחוץ</h3>
-                                <p>אמונה שגויה, משל הגלים,ההשפעה שלנו על הסביבה, ולהפך</p>
+                                <p>אמונה שגויה<br> משל הגלים<br>ההשפעה שלנו על הסביבה<br> ולהפך</p>
                             </div>
                         </div>
                         
@@ -954,7 +1172,7 @@ p {
                             </div>
                             <div class="chapter-details">
                                 <h3>פרק 10:  דיכאון כנקודת פתיחה</h3>
-                                <p>היום שאחרי, ממני אליכם, תודות</p>
+                                <p>היום שאחרי<br> ממני אליכם, תודות</p>
                             </div>
                         </div>
                     </div>
@@ -1109,7 +1327,7 @@ p {
                             <span class="radio-btn"></span>
                             <div class="radio-content">
                                 <label>משלוח עד הבית<span class="price">₪119</span></label>
-							<div class="feature"><i class="fas fa-truck"></i> משלוח עד 14 ימי עסקים</div>
+							<div class="feature">משלוח עד 14 ימי עסקים <i class="fas fa-truck"></i> </div>
                             </div>
                         </div>
                     </div>
@@ -1141,7 +1359,7 @@ p {
                     </div>
                     
                     <button class="btn-purchase">לרכישה מאובטחת</button>
-                    <p class="purchase-note">התשלום מאובטח ומוצפן • אפשרות ביטול תוך 14 יום</p>
+                    <p class="purchase-note">התשלום מאובטח ומוצפן</p>
                 </div>
             </div>
         </div>
@@ -1153,136 +1371,203 @@ p {
             <p>דיכאון כמתנה - מסע מהחושך אל האור</p>
         </div>
     </footer>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Menu Toggle
-    const menuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-    
-    if (menuBtn && navLinks) {
-        menuBtn.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            
-            // Toggle icon
-            const icon = menuBtn.querySelector('i');
-            if (icon.classList.contains('fa-bars')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-    }
-    
-    // Smooth Scrolling for Anchor Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80, // Accounting for fixed header
-                    behavior: 'smooth'
-                });
-                
-                // Close mobile menu if open
-                if (navLinks && navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                    const icon = menuBtn.querySelector('i');
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-            }
-        });
-    });
-    
-    // Tab Functionality
-    const tabButtons = document.querySelectorAll('.tab-button');
-    const tabContents = document.querySelectorAll('.tab-content');
-    
-    if (tabButtons.length && tabContents.length) {
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons and contents
-                tabButtons.forEach(btn => btn.classList.remove('active'));
-                tabContents.forEach(content => content.classList.remove('active'));
-                
-                // Add active class to clicked button and corresponding content
-                button.classList.add('active');
-                const tabId = button.getAttribute('data-tab');
-                document.getElementById(tabId).classList.add('active');
+            AOS.init({
+                duration: 1000,
+                once: false,
+                mirror: true,
+                offset: 120
             });
-        });
-    }
-    
-    // Accordion Functionality
-    const accordionHeaders = document.querySelectorAll('.accordion-header');
-    
-    if (accordionHeaders.length) {
-        accordionHeaders.forEach(header => {
-            header.addEventListener('click', () => {
-                const accordionItem = header.parentElement;
-                accordionItem.classList.toggle('active');
-                
-                // Close other accordion items
-                const allItems = document.querySelectorAll('.accordion-item');
-                allItems.forEach(item => {
-                    if (item !== accordionItem) {
-                        item.classList.remove('active');
+			        });
+    document.addEventListener('DOMContentLoaded', () => {
+        const el = document.querySelector('.typing-effect');
+        setTimeout(() => {
+            el.classList.add('typing-finished');
+        }, 2000); // אחרי 3 שניות בדיוק
+    });
+
+  // Set current year
+  const yearEl = document.getElementById('currentYear');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+
+  // Animate staggered list items
+            setTimeout(() => {
+                const listItems = document.querySelectorAll('.staggered-animation li');
+                listItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.classList.add('visible');
+                    }, index * 200);
+                });
+            }, 1000);
+
+            // Add appear class to elements with animation classes when they're in viewport
+            const animatedElements = document.querySelectorAll('.slide-up, .slide-right, .slide-left, .fade-in, .zoom-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('appear');
                     }
                 });
+            }, { threshold: 0.1 });
+            
+            animatedElements.forEach(el => {
+                observer.observe(el);
             });
-        });
-    }
-    
-    // Purchase Options
-    const radioOptions = document.querySelectorAll('.radio-option');
-    const productNameEl = document.getElementById('product-name');
-    const productPriceEl = document.getElementById('product-price');
-    const totalPriceEl = document.getElementById('total-price');
-    const deliveryRowEl = document.querySelector('.delivery-row');
-    
-    if (radioOptions.length && productNameEl && productPriceEl && totalPriceEl) {
-        radioOptions.forEach(option => {
-            option.addEventListener('click', () => {
-                // Remove active class from all options
-                radioOptions.forEach(opt => opt.classList.remove('active'));
-                
-                // Add active class to clicked option
-                option.classList.add('active');
-                
-                // Update order summary
-                const price = option.getAttribute('data-price');
-                const optionText = option.querySelector('label').textContent.split('₪')[0].trim();
-                
-                productNameEl.textContent = optionText;
-                productPriceEl.textContent = `₪${price}`;
-                totalPriceEl.textContent = `₪${price}`;
-                
-                // Show/hide delivery row
-                if (optionText === 'איסוף עצמי') {
-                    deliveryRowEl.style.display = 'none';
-                } else {
-                    deliveryRowEl.style.display = 'flex';
-                }
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
             });
+
+  // Appear on scroll (manual animations)
+  const appearObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('appear');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.slide-up, .slide-right, .slide-left, .fade-in, .zoom-in').forEach(el => {
+    appearObserver.observe(el);
+  });
+
+  // IntersectionObserver for animate-fade-up (once)
+  const fadeUpObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          fadeUpObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  document.querySelectorAll(".animate-fade-up").forEach(el => {
+    fadeUpObserver.observe(el);
+  });
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetEl = document.querySelector(targetId);
+
+      if (targetEl) {
+        window.scrollTo({
+          top: targetEl.offsetTop - 80,
+          behavior: 'smooth'
         });
-    }
-    
-    // Purchase Button (placeholder functionality)
-    const purchaseBtn = document.querySelector('.btn-purchase');
-    
-    if (purchaseBtn) {
-        purchaseBtn.addEventListener('click', function() {
-            alert('מערכת הרכישה תהיה פעילה בקרוב. תודה על ההתעניינות!');
+      }
+
+      // Close mobile nav if open
+      if (navLinks && navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        const icon = menuBtn.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+  });
+
+  // Testimonials slider
+  const slides = document.querySelectorAll('.testimonial-slide');
+  const dotsContainer = document.getElementById('dots');
+  let index = 0;
+
+
+  // Mobile menu toggle
+  const menuBtn = document.querySelector('.mobile-menu-btn');
+  const navLinks = document.querySelector('.nav-links');
+  if (menuBtn && navLinks) {
+    menuBtn.addEventListener('click', function () {
+      navLinks.classList.toggle('active');
+      const icon = menuBtn.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+  }
+
+  // Tabs
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabContents = document.querySelectorAll('.tab-content');
+  if (tabButtons.length && tabContents.length) {
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+
+        button.classList.add('active');
+        const tabId = button.getAttribute('data-tab');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+  }
+
+  // Accordion
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+  if (accordionHeaders.length) {
+    accordionHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const accordionItem = header.parentElement;
+        accordionItem.classList.toggle('active');
+
+        document.querySelectorAll('.accordion-item').forEach(item => {
+          if (item !== accordionItem) item.classList.remove('active');
         });
-    }
-});
+      });
+    });
+  }
+
+  // Purchase options
+  const radioOptions = document.querySelectorAll('.radio-option');
+  const productNameEl = document.getElementById('product-name');
+  const productPriceEl = document.getElementById('product-price');
+  const totalPriceEl = document.getElementById('total-price');
+  const deliveryRowEl = document.querySelector('.delivery-row');
+
+  if (radioOptions.length && productNameEl && productPriceEl && totalPriceEl) {
+    radioOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        radioOptions.forEach(opt => opt.classList.remove('active'));
+        option.classList.add('active');
+
+        const price = option.getAttribute('data-price');
+        const optionText = option.querySelector('label').textContent.split('₪')[0].trim();
+
+        productNameEl.textContent = optionText;
+        productPriceEl.textContent = `₪${price}`;
+        totalPriceEl.textContent = `₪${price}`;
+
+        if (deliveryRowEl) {
+          deliveryRowEl.style.display = (optionText === 'איסוף עצמי') ? 'none' : 'flex';
+        }
+      });
+    });
+  }
+
+  const purchaseBtn = document.querySelector('.btn-purchase');
+  if (purchaseBtn) {
+    purchaseBtn.addEventListener('click', function () {
+      alert('מערכת הרכישה תהיה פעילה בקרוב. תודה על ההתעניינות!');
+    });
+  }
+
+
+
     </script>
 </body>
 </html>
