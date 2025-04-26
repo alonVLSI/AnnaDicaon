@@ -202,7 +202,9 @@ p {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
+        width: 100%;
+    min-height: 80vh;
+    overflow: hidden; /* הוספה חשובה! */
     clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
     z-index: 1;
 }
@@ -682,14 +684,6 @@ p {
     flex-direction: column;
     align-items: center; /* מרכז את כל התוכן אופקית */
     text-align: center;
-}
-.hero-book {
-    background-image: url('images/PurpleBackground.JPG'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-	  min-height: 80vh; /* חדש! */
-
 }
 
         /* Animation classes */
