@@ -40,11 +40,12 @@
 
 body {
     font-family: 'Heebo', sans-serif;
-    background-color: var(--dark-bg);
+    background: linear-gradient(to bottom right, #7FDBFF, #007D8C);
     color: var(--light-text);
     line-height: 1.6;
     direction: rtl;
 }
+
 
 .container {
     width: 100%;
@@ -88,9 +89,9 @@ h3 {
 }
 
 p {
-    margin-bottom: 1rem;
 	text-align:center;
 	font-size: 1rem;
+	margin-bottom:0rem;
 }
 
 /* Buttons */
@@ -192,23 +193,6 @@ p {
     padding: 2rem 0;
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-        background-image: url('images/PurpleBackground.JPG'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-        width: 100%;
-    min-height: 80vh;
-    overflow: hidden; /* הוספה חשובה! */
-    clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
-    z-index: 1;
-}
-
 .hero::before {
     content: '';
     position: absolute;
@@ -259,15 +243,12 @@ p {
 }
 
 .book-cover-inner h2 {
-    color: white;
     transform: rotate(-5deg);
     font-size: 1.2rem;
 }
 
 .subtitle {
     font-size: 1.25rem;
-    color: #ccc;
-    margin-bottom: 2rem;
 }
 
 .hero-buttons {
@@ -279,7 +260,7 @@ p {
 
 /* Section Styling */
 .section {
-    padding: 5rem 0;
+    padding: 1rem 0;
 }
 
 .bg-dark {
@@ -288,7 +269,7 @@ p {
 
 .section-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 .section-grid {
@@ -322,7 +303,6 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     font-weight: bold;
     margin: 0 auto;
 }
@@ -471,8 +451,6 @@ p {
 
 .cta-content p {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Purchase Section */
@@ -619,9 +597,6 @@ p {
         font-size: 2.5rem;
     }
 
-    .hero .subtitle {
-        font-size: 1.1rem;
-    }
 }
 
 @media (max-width: 768px) {
@@ -802,15 +777,6 @@ p {
 }
 
 
-
-        
-        .gradient-text {
-            background: linear-gradient(45deg, #25D366, #128C7E);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            display: inline-block;
-        }
         
 @keyframes heartBeat {
     0%, 100% {
@@ -841,34 +807,7 @@ p {
             100% { top: 30px; opacity: 0; }
         }
         
-        /* Enhanced backgrounds */
-        .bg-pattern {
-            background-color: #ffffff;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23b6e6a2' fill-opacity='0.1'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-        
-        .bg-gradient {
-            background: linear-gradient(135deg, rgba(182, 230, 162, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
-        }
-        
-        /* Arrow list styling */
-        .arrow-list li {
-            position: relative;
-            padding-right: 2rem;
-        }
-        
-        .arrow-list li::before {
-            content: "➤";
-            position: absolute;
-            right: 0;
-            color: #25D366;
-            transition: all 0.3s ease;
-        }
-        
-        .arrow-list li:hover::before {
-            transform: translateX(-5px);
-            color: #128C7E;
-        }
+       
         
 .typing-effect {
     border-right: 3px solid;
@@ -920,9 +859,8 @@ p {
     </header>
 
     <section class="hero">
-        <div class="hero-overlay"></div>
         <div class="container">
-            <div class="hero-content hero-book">
+            <div class="hero-content">
                 <div class="book-cover">
                     <div class="book-cover-inner">
                               <img
@@ -932,7 +870,11 @@ p {
                     </div>
                 </div>
                 <h1 data-aos="fade-up">דיכאון כמתנה</h1>
-                <p class="subtitle typing-effect text-white" >תופעות הלוואי של מתנת החזרה לחיים</p>
+                <p class="subtitle typing-effect text-orange-500" style = "margin-bottom: 2rem;">תופעות הלוואי של מתנת החזרה לחיים</p>
+<p class="subtitle text-xl font-extrabold" data-aos="fade-in" style = "margin-bottom: 2rem;">
+  -הספר החדשני ופורץ הדרך בתחום הטיפול העצמי-
+</p>
+
                 <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
                     <a href="#purchase" class="btn-primary" data-aos="fade-in" data-aos-delay="200">רכישת הספר</a>
                     <a href="#chapters" class="btn-secondary" data-aos="fade-in" data-aos-delay="200">תוכן הספר</a>
@@ -947,109 +889,29 @@ p {
       
       <!-- תוכן -->
       <div class="section-content space-y-6 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-purple-700" data-aos="fade-up" data-aos-delay="200">
-          הדרך שלך להתחיל מחדש
-        </h2>
 
-        <p class="text-lg text-gray-700" data-aos="fade-in" data-aos-delay="300">
-          לצאת מהעצבות העמוקה, מהשקט המתוח בגוף, מהלופ של הייאוש וחוסר החשק. להשתחרר מהשנאה, הבושה, השפיטה והכעס – ולהחזיר את התקווה.
-        </p>
+<p class="text-lg text-gray-700 mb-0" data-aos="fade-in" data-aos-delay="200">יציאה מהעצבות הפנימית, מחוסר השקט המורגש בכל הגוף, מהלופ של הייאוש, מחוסר האונים, מחוסר החשק לעשות דברים, לפעול לצאת, לחוש הנאה, לצאת מהלופ של הקשיים בחשיבה, מהשנאה, מהבושה, מהשפיטה ומהאשמה, מהכעס ומאובדן התקווה - </p>
 
-        <p class="text-lg text-gray-700" data-aos="fade-in" data-aos-delay="400">
-          "דיכאון כמתנה" הופך את כל זה לנגיש יותר מאי פעם – הספר שיעזור לך לראות את האור ולחזור לחיים, בעדינות, שלב אחר שלב.
-        </p>
+<p class="text-2xl text-black underline mt-0" data-aos="fade-in" data-aos-delay="300">מעולם לא היתה נגישה יותר.</p>
 
-        <p class="text-lg text-gray-700" data-aos="fade-in" data-aos-delay="500">
-          זו לא רק קריאה – זו התחלה של מסע, עם כלים מעשיים ליישום מיידי, שמתאימים לכל גיל ולכל רקע.
-        </p>
+<p class="text-lg text-gray-700" data-aos="fade-in" data-aos-delay="400">והיום יותר מתמיד נמצאת בהישג יד.</p>
+
+<p class="text-lg text-gray-700" data-aos="fade-in" data-aos-delay="500">אני כל כך מתרגשת להשיק לראשונה את הספר "דיכאון כמתנה", ספר שמעבר לשינוי המטורף שהוא מעביר את כל האוחזים בו, הוא הישועה הפרטית שלי וכולי תקווה שבקרוב גם שלכם.</p>
+
       </div>
 
-      <!-- תמונה -->
-      <div class="section-image animate-fade-in delay-1">
-        <img
-          src="images/FlyingBirds.JPG"
-          alt="ציפורים עפות"
-          class="rounded-2xl shadow-xl w-full object-cover max-h-[400px]"
-        />
-      </div>
+      <!-- יהיה וידאו -->
     </div>
   </div>
 </section>
 
 
-    <section class="section bg-dark" style="background: url('images/sunrise.jpg') center center / cover no-repeat;
-background-color: rgba(0, 0, 0, 0.5); /* שכבת כהות קלה */
-background-blend-mode: overlay;
-">
-        <div class="container">
-            <div class="section-grid reverse">
-                <div class="section-content">
-                    <h2>הנוסחה שצמחה מתוך הכאב</h2>
-                    <p>את כל הדרך שעברתי, כל השיעורים שלמדתי, כל טיפ שעזר לי, כל מורה דרך שחידש לי, כל הידע ש
-					צברתי וכל מה שצריך כדי לקום מהדיכאון ריכזתי בספר אחד שמכיל בתוכו את הנוסחה המדויקת. </p>
-                </div>
-               <!-- <div class="section-image">
-                              <img
-        src="images/GrowFromPain.JPG"
-        alt="ציפורים עפות"
-        class="h-150 w-150 object-cover" />					
-                </div> -->
-            </div>
-        </div>
-    </section>
-
     <section class="section">
         <div class="container">
-            <div class="section-grid">
-                <div class="section-content">
-                    <ul>
-                        <li>אז רגע לפני שאתם מקבלים את ההחלטה שלאחריה החיים שלכם לא הולכים לחזור להיות אותו הדבר</li>
-                        <li>אני רוצה לומר תודה – תודה על ההזדמנות לחשוף בפניכם מציאות חדשה,</li>
-                        <li>תודה על שלא ויתרתם לעצמכם </li>
-                        <li>ותודה על שלמרות התחושות הקשות עדיין בחרתם לתת הזדמנות לשינוי המציאות.</li>
-                    </ul>
-                    <p>הגישה בספר מתאימה לאנשים בכל גיל ורקע, והכלים המעשיים שבו ניתנים ליישום מיידי.</p>
-					<p>
-
-                </div>
-                <div class="section-image">
-                              <img
-        src="images/Thanks.PNG"
-        alt="תודה ותקווה"
-        class="h-150 w-150 object-cover" />					
-                </div>
-            </div>
-        </div>
-    </section>
-<section class="chapter-section">
-				<div class = "first-chapter" style="text-align: center;">
-				<p><strong>עדיין מתלבט/ת?</strong> <br>
-קרא/י את הפרק הראשון ותראה/י אם זה מדבר אליך.</p>
-				      <a class="btn-white" style="text-align: center;" id="FirstChapter"> הורד את הפרק הראשון  <i class="fas fa-gift"></i></a>
-				</div>
-</section>
-    <section id="author" class="section bg-dark">
-        <div class="container">
-            <div class="author-section">
-                <div class="author-image">
-                    <div class="author-avatar">
-        <div class="section-image">
-                              <img
-        src="images/Profile.JPG"
-        alt="המחבר"
-        class="h-60 w-60 rounded-full" />					
-                </div>
-                    </div>
-                </div>
-
-                <div class="author-content">
-                    <h2>תקציר הספר</h2>
-                    <p>זו הייתה התקופה הכי גרועה בחיי. הייתי שבויה עמוק בתוך דפוסי חשיבה שליליים, חוויתי התפרצויות בכי והתקפי הרס עצמי שפגעו גם בי וגם בסביבה שלי. </p>
-                    <p>פניתי למטפלים שונים, מפסיכיאטרים ופסיכולוגים ועד רבנים ומדריכים רוחניים, וכולם אמרו לי שהשובות נמצאות בתוכי. לא ידעתי איך למצוא אותן ואף אחד לא נתן לי פתרונות. התסכול היה עצום.</p>
-                    <p>בעיצומו של התקף דיכאון ואחרי ניסיונות טיפול ואנשים שלא השיגו תוצאות, החליטה אנה שביט סער פשוט לכתוב.</p>
-					<p> בכל פעם שהיד היא פנתה אל המקלדת ושפכה את ליבה, כתבה וכתבה מבלי לקרוא עד שהוקל לה.</p>
-					<p> כך עשתה במשך שבועות, ובכל פעם שכתבה הרגישה שהדשים הכלואים בתוכה משתחררים ומתפוגגים. מרחק הזמן, כאשר קראה את המילים שכתבה, הבינה שהשובות נמצאות לפניה.</p>
-
+            <div class="section-grid reverse">
+                <div class="section-content text-xl text-bold">
+                    <p>את כל הדרך שעברתי, כל השיעורים שלמדתי, כל טיפ שעזר לי, כל מורה דרך שחידש לי, כל הידע ש
+					צברתי וכל מה שצריך כדי לקום מהדיכאון - <br> <strong>ריכזתי בספר אחד שמכיל בתוכו את הנוסחה המדויקת.<strong/> </p>
                 </div>
             </div>
         </div>
@@ -1076,10 +938,7 @@ background-blend-mode: overlay;
                             </div>
                             <div class="chapter-details">
                                 <h3>פרק 1: נקודת פתיחה</h3>
-								<p>הקדמה</p>
-                                <p>המקום שממנו הגעתי והמצוקה הנפשית שלי</p>
-								<p>לפני שמתחילים</p>
-
+								<p>הקדמה<br>המקום שממנו הגעתי והמצוקה הנפשית שלי<br>לפני שמתחילים</p>
                             </div>
                         </div>
                         
@@ -1099,8 +958,7 @@ background-blend-mode: overlay;
                             </div>
                             <div class="chapter-details">
                                 <h3>פרק 3: נקודת מפנה</h3>
-                                <p>מודעות</p>
-								<p>תת מודע</p>
+                                <p>מודעות<br>תת מודע</p>
                             </div>
                         </div>
                         
@@ -1155,11 +1013,11 @@ background-blend-mode: overlay;
                             <div class="chapter-details">
                                 <h3>פרק 8: את/ה בתפקיד המטפל/ת שלך</h3>
                                 <p>להשלים עם העבר<br> חשבון נפש</p>
-                            </div
-    <div class="chapter-btn-wrapper" style = " text-align: center;">
+                            </div>
+						    <div class="chapter-btn-wrapper" style = "text-align: center;">
 
-				      <a class="btn-white" style="text-align: center;" id="FirstChapter">הורד את הפרק ב- <i class="fas fa-gift"></i></a>
-</div>
+				      <a class="btn-white h-24 w-24" style="text-align: center;" id="FirstChapter">פרק ב  <i class="fas fa-gift"></i></a>
+							</div>
                         </div>
                         
                         <div class="chapter-card">
@@ -1187,7 +1045,32 @@ background-blend-mode: overlay;
         </div>
     </section>
 
-    <section class="section bg-dark">
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>הצעד הראשון שלך לקראת חיים טובים יותר מתחיל עכשיו</h2>
+                <a href="#purchase" class="btn-white">אני רוצה לרכוש את הספר <i class="fas fa-arrow-left"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-grid">
+                <div class="section-content">
+                    <ul>
+                        <li>אז רגע לפני שאתם מקבלים את ההחלטה שלאחריה החיים שלכם לא הולכים לחזור להיות אותו הדבר</li>
+                        <li>אני רוצה לומר תודה – תודה על ההזדמנות לחשוף בפניכם מציאות חדשה,</li>
+                        <li>תודה על שלא ויתרתם לעצמכם </li>
+                        <li>ותודה על שלמרות התחושות הקשות עדיין בחרתם לתת הזדמנות לשינוי המציאות.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2>קצת חוות דעת</h2>
@@ -1288,17 +1171,8 @@ background-blend-mode: overlay;
         </div>
     </section>
 
-    <section class="section cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>הצעד הראשון שלך לקראת חיים טובים יותר מתחיל עכשיו</h2>
-                <a href="#purchase" class="btn-white">אני רוצה לרכוש את הספר <i class="fas fa-arrow-left"></i></a>
-            </div>
-        </div>
-    </section>
-
     <section id="purchase" class="section">
-        <div class="container">
+        <div class="container"
             <div class="section-header">
                 <h2>רכישת הספר</h2>
                 <p>בחר את אפשרות הרכישה המתאימה לך</p>
