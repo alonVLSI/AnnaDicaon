@@ -815,21 +815,55 @@ p {
     animation: typing 2s steps(30, end) forwards, blink 0.5s step-end infinite;
 }
 
-/* הקלדה */
+.marketing-line {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #b56b6a;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid #dfa5a4;
+  white-space: normal;
+  max-width: 100%;
+
+  /* אפקטים: כתיבה + הסתרת סמן */
+  animation:
+    typing 3.5s steps(40, end),
+    hide-cursor 3.5s steps(1, end) forwards;
+}
+
+/* כתיבה */
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+  from { width: 0 }
+  to { width: 100% }
 }
 
-/* הבהוב של הסמן */
-@keyframes blink {
-    50% { border-color: transparent }
+/* הסתרת סמן */
+@keyframes hide-cursor {
+  0%   { border-color: #b56b6a }
+  100% { border-color: transparent }
 }
 
-/* אחרי 3 שניות - הסר את הסמן */
-.typing-finished {
-    border-right: none;
+/* קו תחתון מונפש */
+.marketing-line::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background-color: #b56b6a;
+
+  /* מופעל לאחר סיום הכתיבה */
+  animation: underline 1s ease-out forwards;
+  animation-delay: 3.6s; /* טיפה אחרי הסמן */
 }
+
+@keyframes underline {
+  to { width: 100% }
+}
+
+
 
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -866,11 +900,11 @@ p {
         class="object-cover" />
                     </div>
                 </div>
-                <h1 data-aos="fade-up">דיכאון כמתנה</h1>
-                <p class="subtitle typing-effect text-orange-500" style = "margin-bottom: 2rem;">תופעות הלוואי של מתנת החזרה לחיים</p>
-<p class="subtitle text-xl font-extrabold" data-aos="fade-in" style = "margin-bottom: 2rem;">
+                <p class="subtitle text-orange-500" style = "margin-bottom: 2rem;">תופעות הלוואי של מתנת החזרה לחיים</p>
+<p class="subtitle marketing-line underline underline-offset-4" data-aos="fade-in">
   -הספר החדשני ופורץ הדרך בתחום הטיפול העצמי-
 </p>
+
 
                 <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
                     <a href="#purchase" class="btn-primary" data-aos="fade-in" data-aos-delay="200">רכישת הספר</a>
@@ -880,7 +914,7 @@ p {
         </div>
     </section>
 
-<section id="about" class="section py-6 bg-white">
+<section id="about" class="section py-6">
   <div class="container mx-auto px-4">
     <div class="section-grid grid grid-cols-1 md:grid-cols-2 items-center gap-8">
       
@@ -907,8 +941,13 @@ p {
         <div class="container">
             <div class="section-grid reverse">
                 <div class="section-content text-xl text-bold">
-                    <p>את כל הדרך שעברתי, כל השיעורים שלמדתי, כל טיפ שעזר לי, כל מורה דרך שחידש לי, כל הידע ש
-					צברתי וכל מה שצריך כדי לקום מהדיכאון - <br> <strong>ריכזתי בספר אחד שמכיל בתוכו את הנוסחה המדויקת.<strong/> </p>
+                   <p>
+  את כל הדרך שעברתי, כל השיעורים שלמדתי, כל טיפ שעזר לי, כל מורה דרך שחידש לי, כל הידע שצברתי וכל מה שצריך כדי לקום מהדיכאון - <br>
+  <strong class="text-[#8b4c4c] text-2xl font-extrabold underline underline-offset-4 decoration-[#8b4c4c] animate-pulse">
+    ריכזתי בספר אחד שמכיל בתוכו את הנוסחה המדויקת.
+  </strong>
+</p>
+
                 </div>
             </div>
         </div>
@@ -917,7 +956,9 @@ p {
     <section id="chapters" class="section">
         <div class="container">
             <div class="section-header">
-                <h2>תוכן עניינים</h2>
+                <h2 class="underline underline-offset-4 decoration-[#8b4c4c]">
+  תוכן עניינים
+</h2>
                 <p>עשרה פרקים בדרך להחלמה</p>
             </div
             
