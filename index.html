@@ -908,14 +908,14 @@ margin-top :1rem;
 
 
                 <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
-                    <a href="#purchase" class="btn-primary" data-aos="fade-in" data-aos-delay="200">רכישת הספר</a>
-                    <a href="#chapters" class="btn-secondary" data-aos="fade-in" data-aos-delay="200">תוכן הספר</a>
+                    <a href="#purchase" class="btn-primary" data-aos="fade-in">רכישת הספר</a>
+                    <a href="#chapters" class="btn-secondary" data-aos="fade-in">תוכן הספר</a>
                 </div>
             </div>
         </div>
     </section>
 
-<section id="about" class="section py-6">
+<section id="about" class="section py-2">
   <div class="container mx-auto px-4">
     <div class="section-grid grid grid-cols-1 md:grid-cols-2 items-center gap-8">
       
@@ -1320,29 +1320,31 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 1000);
 
             // Add appear class to elements with animation classes when they're in viewport
-            const animatedElements = document.querySelectorAll('.slide-up, .slide-right, .slide-left, .fade-in, .zoom-in');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('appear');
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            animatedElements.forEach(el => {
-                observer.observe(el);
-            });
+const animatedElements = document.querySelectorAll('.slide-up, .slide-right, .slide-left, .fade-in, .zoom-in');
 
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('appear');
+            observer.unobserve(entry.target); // לא לצפות יותר, האנימציה הסתיימה
+        }
+    });
+}, { threshold: 0.1 });
+
+animatedElements.forEach(el => {
+    observer.observe(el);
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
 
   // Appear on scroll (manual animations)
   const appearObserver = new IntersectionObserver((entries) => {
