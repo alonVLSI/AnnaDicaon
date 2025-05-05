@@ -815,8 +815,8 @@ margin-top :1rem;
 
   /* אפקטים: כתיבה + הסתרת סמן */
   animation:
-    typing 3.5s steps(40, end),
-    hide-cursor 3.5s steps(1, end) forwards;
+    typing 2.5s steps(30, end),
+    hide-cursor 2.5s steps(1, end) forwards;
 }
 
 /* כתיבה */
@@ -835,15 +835,12 @@ margin-top :1rem;
 .marketing-line::after {
   content: '';
   position: absolute;
-  bottom: -4px;
   left: 0;
-  height: 3px;
   width: 0;
   background-color: #b82073;
 
   /* מופעל לאחר סיום הכתיבה */
-  animation: underline 1s ease-out forwards;
-  animation-delay: 3.6s; /* טיפה אחרי הסמן */
+  animation-delay: 2.6s; /* טיפה אחרי הסמן */
 }
 
 @keyframes underline {
@@ -897,7 +894,7 @@ margin-top :1rem;
 
 <section id="about" class="section">
   <div class="container mx-auto px-4">
-    <div class="section-grid grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+<div class="section-grid grid grid-cols-1 md:grid-cols-2 items-center gap-x-8 gap-y-4">
       
       <!-- תוכן -->
       <div class="section-content space-y-6 text-center">
@@ -922,7 +919,7 @@ margin-top :1rem;
         <div class="container">
             <div class="section-grid reverse">
                 <div class="section-content text-xl text-bold">
-                   <p>
+                   <p class = "text-lg">
   את כל הדרך שעברתי, כל השיעורים שלמדתי, כל טיפ שעזר לי, כל מורה דרך שחידש לי, כל הידע שצברתי וכל מה שצריך כדי לקום מהדיכאון - <br>
   <strong class="text-[#8b4c4c] text-2xl font-extrabold underline underline-offset-4 decoration-[#8b4c4c] animate-pulse">
     ריכזתי בספר אחד שמכיל בתוכו את הנוסחה המדויקת.
