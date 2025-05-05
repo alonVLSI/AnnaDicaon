@@ -653,27 +653,6 @@ margin-top :1rem;
     align-items: center; /* מרכז את כל התוכן אופקית */
     text-align: center;
 }
-
-        /* Animation classes */
-        .float {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-        
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
         
         .slide-up {
             opacity: 0;
@@ -728,21 +707,8 @@ margin-top :1rem;
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
         }
+       
         
-        .staggered-animation li {
-            opacity: 0;
-            transform: translateX(20px);
-            transition: all 0.5s ease;
-        }
-        
-        .staggered-animation li.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        
-.glow {
-  animation: glow 2s ease-in-out infinite alternate;
-}
 
 @keyframes glow {
   from {
@@ -802,6 +768,22 @@ margin-top :1rem;
     animation: typing 2s steps(30, end) forwards, blink 0.5s step-end infinite;
 }
 
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+.typing-finished {
+    border-right: none !important;
+    animation: none;
+    width: 100%; /* שמור על רוחב מלא כדי שהטקסט לא ייחתך */
+}
+
+
 .marketing-line {
   font-size: 2.5rem;
   font-weight: 800;
@@ -812,40 +794,10 @@ margin-top :1rem;
   border-right: 2px solid #dfa5a4;
   white-space: normal;
   max-width: 100%;
-
-  /* אפקטים: כתיבה + הסתרת סמן */
-  animation:
-    typing 2.5s steps(30, end),
-    hide-cursor 2.5s steps(1, end) forwards;
 }
 
-/* כתיבה */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
 
-/* הסתרת סמן */
-@keyframes hide-cursor {
-  0%   { border-color: #b82073 }
-  100% { border-color: transparent }
-}
 
-/* קו תחתון מונפש */
-.marketing-line::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 0;
-  background-color: #b82073;
-
-  /* מופעל לאחר סיום הכתיבה */
-  animation-delay: 2.6s; /* טיפה אחרי הסמן */
-}
-
-@keyframes underline {
-  to { width: 100% }
-}
 html, body {
   overflow-x: hidden;
 }
@@ -888,7 +840,7 @@ html, body {
         class="object-cover" />
                     </div>
                 </div>
-<p class="subtitle marketing-line" data-aos="fade-up" data-aos-once="true">
+<p class="subtitle marketing-line typing-effect" data-aos="fade-up" data-aos-once="true">
   הספר החדשני ופורץ הדרך בתחום הטיפול העצמי
 </p>
             </div>
@@ -1260,21 +1212,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 2000); // אחרי 3 שניות בדיוק
     });
 
-  // Set current year
-  const yearEl = document.getElementById('currentYear');
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
 
-  // Animate staggered list items
-            setTimeout(() => {
-                const listItems = document.querySelectorAll('.staggered-animation li');
-                listItems.forEach((item, index) => {
-                    setTimeout(() => {
-                        item.classList.add('visible');
-                    }, index * 200);
-                });
-            }, 1000);
 
             // Add appear class to elements with animation classes when they're in viewport
 const animatedElements = document.querySelectorAll('.slide-up, .slide-right, .slide-left, .fade-in, .zoom-in');
