@@ -1233,7 +1233,13 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 			        });
 
-
+	  window.onload = function() {
+    var s = document.createElement('script');
+    s.setAttribute('data-account', 'VZA8XqqwST');
+    s.setAttribute('data-position', '5'); // בוחר מיקום
+    s.src = 'https://cdn.userway.org/widget.js';
+    document.body.appendChild(s);
+  }
             // Add appear class to elements with animation classes when they're in viewport
 const animatedElements = document.querySelectorAll('.slide-up, .slide-right, .slide-left, .fade-in, .zoom-in');
 
