@@ -807,6 +807,26 @@ html, body {
   overflow-x: hidden;
 }
 
+.download-toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.download-toast.fade-out {
+  opacity: 0;
+  transform: translateY(20px);
+}
 
 </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -1413,14 +1433,30 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       hero.style.marginTop = (headerHeight + 30) + "px";
     }
   });
-    document.getElementById("Chapter8").addEventListener("click", function() {
-        const link = document.createElement("a");
-        link.href = "Chapter8.pdf"; // ודא שהנתיב נכון
-        link.setAttribute("download", "Chapter8.pdf"); // מחייב הורדה במקום פתיחה
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    });
+document.getElementById("Chapter8").addEventListener("click", function () {
+  const link = document.createElement("a");
+  link.href = "Chapter8.pdf";
+  link.setAttribute("download", "Chapter8.pdf");
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  // יצירת הודעה עם אנימציה
+  const message = document.createElement("div");
+  message.className = "download-toast";
+  message.textContent = "📥 ההורדה החלה...";
+
+  document.body.appendChild(message);
+
+  setTimeout(() => {
+    message.classList.add("fade-out");
+  }, 2000);
+
+  setTimeout(() => {
+    document.body.removeChild(message);
+  }, 3000);
+});
+
     </script>
 </body>
 </html>
