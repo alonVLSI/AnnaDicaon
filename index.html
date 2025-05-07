@@ -182,14 +182,15 @@ p {
 
 /* Hero Section */
 .hero {
-    min-height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
- margin-top: 80px;
+    margin-top: 80px;
+    overflow-x: hidden; /* חדש - מונע גלילה אופקית */
 }
+
 
 .hero::before {
     content: '';
@@ -852,20 +853,13 @@ html, body {
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="book-cover">
-                              <img
-        src="images/dicaonpresent.png"
-        alt="דיכאון כמתנה"
-        class="object-cover" />
-                </div>
+<section class="hero">
+  <img
+    src="images/dicaonpresent.png"
+    alt="דיכאון כמתנה"
+    class="max-w-full h-auto object-contain" />
+</section>
 
-
-            </div>
-        </div>
-    </section>
 
 <section id="about" class="section">
   <div class="container mx-auto px-4">
