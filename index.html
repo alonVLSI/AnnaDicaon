@@ -377,6 +377,23 @@ p {
     position: relative;
 }
 
+.close-quote {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  font-size: 1.5rem;
+  color: #ccc;
+}
+.open-quote {
+  left: 1rem;
+  font-size: 1.5rem;
+  color: #ccc;
+}
+.testimonial-card h4 {
+  text-align: center;
+  margin-top: 0.5rem; /* אופציונלי להפרדה מהטקסט */
+  color: #fff; /* אם הרקע כהה */
+}
 .testimonial-icon {
     position: absolute;
     top: 1rem;
@@ -991,25 +1008,23 @@ html, body {
                 <h2 class="text-3xl sm:text-2xl font-extrabold text-[#8b4c4c] decoration-[#8b4c4c] mb-2 tracking-wide">קצת חוות דעת</h2>
             </div>
             
-            <div class="testimonials">
-                <div class="testimonial-card">
-                    <i class="fas fa-quote-right testimonial-icon"></i>
-                    <p>הספר הזה שינה לי את החיים. הצלחתי לראשונה להבין את הדיכאון שלי כמתנה אמיתית שנועדה לחזק אותי.</p>
-                    <h4>אלון,חיפה</h4>
-                </div>
-                
-                <div class="testimonial-card">
-                    <i class="fas fa-quote-right testimonial-icon"></i>
-                    <p>זהו מדריך מעשי ורגיש למי שמתמודד עם דיכאון. הטכניקות שלמדתי פה הובילו אותי לפריצת דרך אמיתית.</p>
-                    <h4>יוסי לוי, ירושלים</h4>
-                </div>
-                
-                <div class="testimonial-card">
-                    <i class="fas fa-quote-right testimonial-icon"></i>
-                    <p>כמטפלת, אני ממליצה על הספר הזה לכל המטופלים שלי. הגישה של המחבר היא רעננה ומלאת תקווה.</p>
-                    <h4>ד"ר שרה גולדשטיין, פסיכולוגית קלינית</h4>
-                </div>
-            </div>
+<div class="testimonials">
+    <div class="testimonial-card" data-aos="fade-up" data-aos-once="true" data-aos-delay="100">
+        <i class="fas fa-quote-right open-quote"></i>
+        <p>מדריך לא רק ליציאה מדיכאון, גם לעבודת נפש וזיהוי דפוסים שתועקים ומעכבים</p>
+		<i class="fas fa-quote-left close-quote" style="text-align:left;"></i>
+		 <h4>אלון, חיפה</h4>
+
+    </div>
+    
+    <div class="testimonial-card" data-aos="fade-up" data-aos-once="true" data-aos-delay="200">
+        <i class="fas fa-quote-right open-quote"></i>
+        <p>זהו מדריך מעשי ורגיש למי שמתמודד עם דיכאון. הטכניקות שלמדתי פה הובילו אותי לפריצת דרך אמיתית</p>
+				<i class="fas fa-quote-left close-quote" style="text-align:left;"></i>
+        <h4>אנה, תל אביב</h4>
+    </div>
+</div>
+
         </div>
     </section>
 
@@ -1019,13 +1034,13 @@ html, body {
   <h2 class="text-3xl sm:text-2xl font-extrabold text-[#8b4c4c] decoration-[#8b4c4c] mb-2 tracking-wide">
     שאלות נפוצות
   </h2>
-  <p class="text-lg text-gray-700 font-[Heebo] leading-relaxed text-[#8b4c4c] decoration-[#8b4c4c]">
+  <p class="text-lg text-gray-700 font-[Heebo] leading-relaxed text-[#8b4c4c] decoration-[#8b4c4c]" data-aos="fade-up" data-aos-once="true" data-aos-delay="100">
     תשובות לשאלות הנפוצות ביותר
   </p>
             </div>
             
             <div class="accordion">
-                <div class="accordion-item">
+                <div class="accordion-item" data-aos="fade-up" data-aos-once="true" data-aos-delay="100">
                     <div class="accordion-header">
                         איך אדע אם הספר מתאים לי?
                         <i class="fas fa-chevron-down"></i>
@@ -1034,7 +1049,7 @@ html, body {
                         <p>הספר מתאים במיוחד למי שנמצא בדיכאון או חווה קושי נפשי ומחפש כלים להתמודד עם המצב ולצאת לדרך חדשה. הספר נכתב כמדריך מעשי שמכיל תובנות אישיות, ידע מעמיק על הדיכאון, דרכים להימנע ממוקשים רגשיים וכלים לשינוי תפיסה ובניית תקווה. כולי אמונה שגם אדם שלא חווה דיכאון יוכל להפיק ממנו ערך רב שיסייע לו לתמוך בעצמו או באחרים.</p>
                     </div>
                 </div>
-                   <div class="accordion-item">
+                   <div class="accordion-item"  data-aos="fade-up" data-aos-once="true" data-aos-delay="150">
                     <div class="accordion-header">
                        האם הספר מחליף טיפול?
                         <i class="fas fa-chevron-down"></i>
@@ -1044,7 +1059,7 @@ html, body {
                     </div>
                 </div>
 
-                <div class="accordion-item">
+                <div class="accordion-item"  data-aos="fade-up" data-aos-once="true" data-aos-delay="200">
                     <div class="accordion-header">
                         האם הספר מתאים גם למי שלא סובל מדיכאון?
                         <i class="fas fa-chevron-down"></i>
@@ -1055,7 +1070,7 @@ html, body {
                 </div>
                 
                 
-                <div class="accordion-item">
+                <div class="accordion-item"  data-aos="fade-up" data-aos-once="true" data-aos-delay="220">
                     <div class="accordion-header">
                         תוך כמה זמן אקבל את הספר?
                         <i class="fas fa-chevron-down"></i>
@@ -1065,7 +1080,7 @@ html, body {
                     </div>
                 </div>
                 
-                <div class="accordion-item">
+                <div class="accordion-item"  data-aos="fade-up" data-aos-once="true" data-aos-delay="250">
                     <div class="accordion-header">
                        האם יש אופציה לרכוש דרך סניף?
                         <i class="fas fa-chevron-down"></i>
@@ -1075,7 +1090,7 @@ html, body {
                     </div>
 				</div>
 					
-                <div class="accordion-item">
+                <div class="accordion-item"  data-aos="fade-up" data-aos-once="true" data-aos-delay="280">
                     <div class="accordion-header">
                        האם הספר כתוב בצורה שתהיה נגישה גם למי שאינו קורא הרבה?
                         <i class="fas fa-chevron-down"></i>
