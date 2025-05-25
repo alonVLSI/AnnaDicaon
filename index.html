@@ -705,7 +705,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const optionText = option.querySelector('label').textContent.split('₪')[0].trim();
 
         productNameEl.textContent = optionText;
-        productPriceEl.textContent = `₪${price}`;
         totalPriceEl.textContent = `₪${price}`;
 
         if (deliveryRowEl) {
