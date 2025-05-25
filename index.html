@@ -3,7 +3,32 @@
 <html class="h-full" lang="he" dir="rtl">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דיכאון כמתנה - הספר שילווה אתכם בדרך להחלמה</title>
+    <!-- Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animation Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<meta name="description" content="דיכאון כמתנה">
+<meta name="keywords" content="דיכאון כמתנה, אנה שביט סער">
+<meta property="og:url" content="https://annayetziamedicaon.netlify.app/">
+<meta property="og:type" content="website">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דיכאון כמתנה - מסע מהחושך אל האור</title>
+<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="anonymous">
@@ -176,7 +201,7 @@
     </div>
     <h4 class="mb-4 text-2xl font-semibold min-h-[3rem]">פרק מתנה</h4>
     <div class="flex flex-col justify-center items-center min-h-[120px]">
-      <button class="mt-4 bg-[var(--primary-button-bg-color)] text-[var(--primary-button-text-color)] px-4 py-1 rounded-[var(--button-rounded-radius)] hover:bg-[var(--primary-button-hover-bg-color)] transition-colors duration-300 text-lg font-bold">
+      <button id="Chapter8" class="mt-4 bg-[var(--primary-button-bg-color)] text-[var(--primary-button-text-color)] px-4 py-1 rounded-[var(--button-rounded-radius)] hover:bg-[var(--primary-button-hover-bg-color)] transition-colors duration-300 text-lg font-bold">
         פרק 8 - "תהיה המטפל של עצמך" במתנה ממני!
       </button>
     </div>
@@ -394,7 +419,92 @@
 </div>
 </div>
 </div>
-</section></div><div><footer class="relative overflow-hidden bg-gradient-to-br from-[var(--light-background-color)] to-[var(--medium-background-color)] py-16 code-section" id="szg2g9">
+</div>
+</section>
+<section id="purchase" class="relative py-16 bg-gradient-to-br from-[var(--light-background-color)] to-[var(--medium-background-color)] code-section" id="faq-section" data-landingsite-faq="true">
+
+  <div class="container">
+    <div class="section-header">
+<h2 class="mb-8 text-center text-5xl font-bold [font-family:var(--font-family-heading)] lg:text-center xl:text-6xl 2xl:text-7xl tracking-tight leading-tight text-[var(--dark-text-color)]">
+<div >רכישת הספר</div>
+</h2>
+      <h2 class="mb-8 text-center text-2xl font-bold" >בחר את אפשרות הרכישה המתאימה לך<h2>
+    </div>
+
+    <div class="purchase-grid">
+      <div class="purchase-options">
+        <h3><i class="fas fa-box text-center text-xl"></i> אפשרויות רכישה</h3>
+
+        <div class="radio-group">
+
+          <div class="radio-option active" data-price="94">
+            <span class="radio-btn"></span>
+            <div class="radio-content">
+              <label>איסוף עצמי <span class="price">₪94</span></label>
+
+              <!-- תפריט כתובות -->
+              <div class="pickup-location">
+                <label for="pickup-select">בחר כתובת איסוף:</label>
+                <select id="pickup-select" name="pickup-location" class="text-black rounded-md">
+                  <option value="tel-aviv" class="text-black">תל אביב - אבן גבירול 144</option>
+                  <option value="jerusalem" class="text-black">אשקלון - אהוד 2</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="radio-option" data-price="119">
+            <span class="radio-btn"></span>
+            <div class="radio-content">
+              <label>משלוח עד הבית <span class="price">₪119</span></label>
+              <div class="feature text-lg">משלוח עד 7 ימי עסקים <i class="fas fa-truck"></i></div>
+
+              <!-- שדה כתובת למשלוח -->
+              <div id="shipping-address" style="display: none; margin-top: 1rem;">
+                <label for="address">הכנס כתובת למשלוח:</label>
+                <input type="text" id="address" name="shipping-address" class="text-black rounded-md" placeholder="הכנס כתובת" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="order-summary">
+        <h3><i class="fas fa-credit-card"></i> סיכום הזמנה</h3>
+
+        <div class="summary-content">
+          <div class="summary-row">
+            <span>מוצר:</span>
+            <span id="product-name">ספר מודפס</span>
+          </div>
+
+          <div class="summary-row">
+            <span>מחיר:</span>
+            <span id="product-price">₪94</span>
+          </div>
+
+          <div class="summary-row delivery-row" style="display: none;">
+            <span>משלוח:</span>
+            <span>₪25</span>
+          </div>
+
+          <div class="summary-row total-row">
+            <span>סה"כ:</span>
+            <span id="total-price" class="highlight-price">₪94</span>
+          </div>
+        </div>
+
+        <button class="btn-purchase">לרכישה מאובטחת</button>
+        <p class="purchase-note text-white">התשלום מאובטח ומוצפן</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div>
+<footer class="relative overflow-hidden bg-gradient-to-br from-[var(--light-background-color)] to-[var(--medium-background-color)] py-16 code-section" id="szg2g9">
+
 <div class="container relative mx-auto px-4 pb-0 sm:px-12 xl:px-32">
 <div class="absolute -left-80 -top-14 h-[400px] w-[400px] rounded-full border-[60px] border-[var(--medium-background-color)]"></div>
 <div class="absolute -right-40 bottom-0 h-[400px] w-[400px] rounded-full border-[60px] border-[var(--medium-background-color)]"></div>
@@ -404,7 +514,10 @@
 </div>
 
 </div>
-</footer></div></div><script src="https://app.landingsite.ai/embed/main.umd.js"></script>
+</footer>
+</div>
+</div>
+<script src="https://app.landingsite.ai/embed/main.umd.js"></script>
       </div>
     <div class="frame-content"></div>
 	</div>
@@ -433,6 +546,227 @@
       thisIcon.classList.toggle('rotate-180');
     });
   });
+
+	  window.onload = function() {
+    var s = document.createElement('script');
+    s.setAttribute('data-account', 'VZA8XqqwST');
+    s.setAttribute('data-position', '5'); // בוחר מיקום
+    s.src = 'https://cdn.userway.org/widget.js';
+    document.body.appendChild(s);
+  }
+            // Add appear class to elements with animation classes when they're in viewport
+const animatedElements = document.querySelectorAll('.slide-up, .slide-right, .slide-left, .fade-in, .zoom-in');
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('appear');
+            observer.unobserve(entry.target); // לא לצפות יותר, האנימציה הסתיימה
+        }
+    });
+}, { threshold: 0.1 });
+
+animatedElements.forEach(el => {
+    observer.observe(el);
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+  // Appear on scroll (manual animations)
+  const appearObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('appear');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.slide-up, .slide-right, .slide-left, .fade-in, .zoom-in').forEach(el => {
+    appearObserver.observe(el);
+  });
+
+  // IntersectionObserver for animate-fade-up (once)
+  const fadeUpObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          fadeUpObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  document.querySelectorAll(".animate-fade-up").forEach(el => {
+    fadeUpObserver.observe(el);
+  });
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetEl = document.querySelector(targetId);
+
+      if (targetEl) {
+        window.scrollTo({
+          top: targetEl.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      }
+
+      // Close mobile nav if open
+      if (navLinks && navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        const icon = menuBtn.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+  });
+
+  // Testimonials slider
+  const slides = document.querySelectorAll('.testimonial-slide');
+  const dotsContainer = document.getElementById('dots');
+  let index = 0;
+
+
+  // Mobile menu toggle
+  const menuBtn = document.querySelector('.mobile-menu-btn');
+  const navLinks = document.querySelector('.nav-links');
+  if (menuBtn && navLinks) {
+    menuBtn.addEventListener('click', function () {
+      navLinks.classList.toggle('active');
+      const icon = menuBtn.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+  }
+
+  // Tabs
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabContents = document.querySelectorAll('.tab-content');
+  if (tabButtons.length && tabContents.length) {
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+
+        button.classList.add('active');
+        const tabId = button.getAttribute('data-tab');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+  }
+
+  // Accordion
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+  if (accordionHeaders.length) {
+    accordionHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const accordionItem = header.parentElement;
+        accordionItem.classList.toggle('active');
+
+        document.querySelectorAll('.accordion-item').forEach(item => {
+          if (item !== accordionItem) item.classList.remove('active');
+        });
+      });
+    });
+  }
+
+  // Purchase options
+  const radioOptions = document.querySelectorAll('.radio-option');
+  const productNameEl = document.getElementById('product-name');
+  const productPriceEl = document.getElementById('product-price');
+  const totalPriceEl = document.getElementById('total-price');
+  const deliveryRowEl = document.querySelector('.delivery-row');
+
+  if (radioOptions.length && productNameEl && productPriceEl && totalPriceEl) {
+    radioOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        radioOptions.forEach(opt => opt.classList.remove('active'));
+        option.classList.add('active');
+
+        const price = option.getAttribute('data-price');
+        const optionText = option.querySelector('label').textContent.split('₪')[0].trim();
+
+        productNameEl.textContent = optionText;
+        productPriceEl.textContent = `₪${price}`;
+        totalPriceEl.textContent = `₪${price}`;
+
+        if (deliveryRowEl) {
+          deliveryRowEl.style.display = (optionText === 'איסוף עצמי') ? 'none' : 'flex';
+        }
+      });
+    });
+  }
+
+  const purchaseBtn = document.querySelector('.btn-purchase');
+  if (purchaseBtn) {
+    purchaseBtn.addEventListener('click', function () {
+      alert('מערכת הרכישה תהיה פעילה בקרוב. תודה על ההתעניינות!');
+    });
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector(".header");
+    const hero = document.querySelector(".hero");
+    if (header && hero) {
+      const headerHeight = header.offsetHeight;
+      hero.style.marginTop = (headerHeight + 30) + "px";
+    }
+  });
+document.getElementById("Chapter8").addEventListener("click", function () {
+  const link = document.createElement("a");
+  link.href = "Chapter8.pdf";
+  link.setAttribute("download", "Chapter8.pdf");
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  // יצירת הודעה עם אנימציה
+  const message = document.createElement("div");
+  message.className = "download-toast";
+  message.textContent = "📥 ההורדה החלה...";
+
+  document.body.appendChild(message);
+
+  setTimeout(() => {
+    message.classList.add("fade-out");
+  }, 2000);
+
+  setTimeout(() => {
+    document.body.removeChild(message);
+  }, 3000);
+});
+  document.querySelectorAll('.radio-option').forEach(option => {
+    option.addEventListener('click', () => {
+      // הסר 'active' מכל האפשרויות והוסף רק לנוכחית
+      document.querySelectorAll('.radio-option').forEach(opt => opt.classList.remove('active'));
+      option.classList.add('active');
+
+      // בדוק אם הטקסט כולל "משלוח עד הבית"
+      const labelText = option.innerText || "";
+      const shippingField = document.getElementById('shipping-address');
+
+      if (labelText.includes("משלוח עד הבית")) {
+        shippingField.style.display = 'block';
+      } else {
+        shippingField.style.display = 'none';
+      }
+    });
+  });
+
 </script>
 
 
