@@ -226,3 +226,61 @@ document.getElementById("Chapter8").addEventListener("click", function () {
       }
     });
   });
+  
+ function openModal() {
+    const modal = document.getElementById('popupModal');
+    const content = document.getElementById('modalContent');
+    modal.classList.remove('hidden');
+
+  }
+
+  function closeModal() {
+    document.getElementById('popupModal').classList.add('hidden');
+  }
+document.getElementById("Chapter8").addEventListener("click", function () {
+  const link = document.createElement("a");
+  link.href = "Chapter8.pdf";
+  link.setAttribute("download", "Chapter8.pdf");
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  // יצירת הודעה עם אנימציה
+  const message = document.createElement("div");
+  message.className = "download-toast";
+  message.textContent = "📥 ההורדה החלה...";
+
+  document.body.appendChild(message);
+
+  setTimeout(() => {
+    message.classList.add("fade-out");
+  }, 2000);
+
+  setTimeout(() => {
+    document.body.removeChild(message);
+  }, 3000);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("Chapter8");
+  if (!btn) return;
+
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const link = document.createElement("a");
+    link.href = "Chapter8.pdf";
+    link.setAttribute("download", "Chapter8.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    const message = document.createElement("div");
+    message.className = "download-toast";
+    message.textContent = "📥 ההורדה החלה...";
+    document.body.appendChild(message);
+
+    setTimeout(() => message.classList.add("fade-out"), 2000);
+    setTimeout(() => document.body.removeChild(message), 3000);
+  });
+});

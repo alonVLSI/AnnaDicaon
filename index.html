@@ -32,6 +32,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="anonymous">
+	<script src="script.js"></script>
+
     <link id="google-fonts-link" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Roboto:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8e98006f77.js" crossorigin="anonymous"></script><style media="all" id="fa-kit-upload"></style><style media="all" id="fa-v4-font-face">/*!
  * Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com
@@ -171,8 +173,9 @@
 </div>
 
 
-</header></div><div><section class="relative bg-gradient-to-br from-[var(--light-background-color)] to-[var(--medium-background-color)] code-section" id="sppb6v8">
-<div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url(&#39;https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/fdbd5627-6ec4-419a-3fd2-2ffac10c4e00/publicContain&#39;)"></div>
+</header></div><div>
+<section class="relative bg-gradient-to-br from-[var(--light-background-color)] to-[var(--medium-background-color)] code-section" id="sppb6v8">
+<div class="absolute inset-0 bg-cover bg-center opacity-10"></div>
 <div class="absolute -left-56 top-0 h-[400px] w-[400px] rounded-full border-[60px] border-[var(--medium-background-color)] opacity-30"></div>
 <div class="absolute bottom-0 top-0 hidden h-full w-full overflow-hidden lg:block">
 <div class="absolute -right-60 bottom-14 h-[400px] w-[400px] rounded-full border-[60px] border-[var(--medium-background-color)] opacity-30"></div>
@@ -283,30 +286,145 @@
 
 
 </div>
-<div class="py-20 container-fluid px-0">
-<div class="w-full md:w-1/2 px-6 text-center md:text-right z-10">
-<div style="text-align:center;"class="mb-4 text-3xl text-white font-semibold opacity-90">הפוך את הקשיים שלך לעוצמה</div>
-<div style="text-align:center;" class="mb-8 text-xl leading-relaxed font-medium text-white opacity-90">את כל הדרך שעברתי, כל השיעורים שלמדתי, כל טיפ שעזר לי, כל מורה דרך שחידש לי, כל הידע שצברתי וכל מה שצריך כדי לקום מהדיכאון ריכזתי בספר אחד שמכיל בתוכו את הנוסחה המדויקת.</div>
-<div class="text-center">
-  <a onclick="openModal()" class="inline-block primary-color-text items-center rounded-lg bg-[var(--secondary-button-bg-color)] px-8 py-[var(--button-padding-y)] text-sm font-semibold text-[var(--secondary-button-text-color)] hover:bg-[var(--secondary-button-hover-bg-color)] hover:text-[var(--secondary-button-hover-text-color)] transition-all duration-300">
-    <span>תוכן עניינים</span>
-  </a>
 </div>
-<!-- Modal -->
-<div id="popupModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden">
-  <div class="bg-white rounded-xl shadow-xl max-w-3xl w-full relative p-6 max-h-[90vh] overflow-y-auto">
-    
-    <!-- Close button -->
-    <button onclick="closeModal()" class="absolute top-3 right-3 text-2xl font-bold text-gray-500 hover:text-red-600">
-      &times;
-    </button>
+</section>
+<section class="py-20 code-section relative bg-gradient-to-tl from-[#7dd9d9] to-[#a7e6e6]">
+  <!-- עיטורים ברקע -->
+  <div class="absolute top-0 -right-40 h-[350px] w-[350px] rounded-full border-[60px] border-[#a7e6e6] opacity-30"></div>
+  <div class="absolute bottom-0 -left-40 h-[300px] w-[300px] rounded-full border-[60px] border-[#7dd9d9] opacity-30"></div>
 
-    <!-- תוכן ייטען כאן -->
-    <div id="modalContent" class="text-right [font-family:var(--font-family-body)]">
-      טוען תוכן...
+  <!-- תוכן -->
+  <div class="container mx-auto px-6 md:px-12 lg:px-20 text-center md:text-right relative z-10">
+    <h2 class="mb-4 text-3xl font-bold text-[#0b6e6e] opacity-95 leading-snug">הפוך את הקשיים שלך לעוצמה</h2>
+    <p class="mb-8 text-xl font-medium text-[#0b6e6e] opacity-90 leading-relaxed">
+      את כל הדרך שעברתי, כל השיעורים שלמדתי, כל טיפ שעזר לי, כל מורה דרך שחידש לי, כל הידע שצברתי וכל מה שצריך כדי לקום מהדיכאון ריכזתי בספר אחד שמכיל בתוכו את הנוסחה המדויקת.
+    </p>
+    <div class="text-center">
+      <a onclick="openModal()" class="inline-block rounded-lg bg-white text-[#0b6e6e] px-8 py-3 text-sm font-semibold hover:bg-[#f0f0f0] hover:text-[#094f4f] transition-all duration-300">
+        תוכן עניינים
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Modal -->
+<div id="popupModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+<section id="chapters" class="bg-[#e0f7f7] py-12 px-4 text-right font-[Heebo]">
+  <div class="container mx-auto max-h-[700px] overflow-y-auto pr-2">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-extrabold text-[#0b6e6e] mb-4">תוכן עניינים</h2>
+      <p class="text-lg text-gray-700">עשרה פרקים בדרך להחלמה</p>
     </div>
 
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- כרטיס פרק -->
+      <div class="bg-white rounded-xl shadow-lg p-6">
+        <h3 class="text-xl font-bold text-[#0b6e6e] mb-2">פרק 1: נקודת פתיחה</h3>
+        <ul class="list-disc pr-5 text-black font-medium space-y-1">
+          <li>הקדמה</li>
+          <li>המקום שממנו הגעתי והמצוקה הנפשית שלי</li>
+          <li>לפני שמתחילים</li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-6">
+        <h3 class="text-xl font-bold text-[#0b6e6e] mb-2">פרק 2: הבנת הדיכאון</h3>
+        <ul class="list-disc pr-5 text-black font-medium space-y-1">
+          <li>הפרדה</li>
+          <li>תסמינים</li>
+          <li>רגע של התבוננות וטיפול תרופתי</li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-6">
+        <h3 class="text-xl font-bold text-[#0b6e6e] mb-2">פרק 3: נקודת מפנה</h3>
+        <ul class="list-disc pr-5 text-black font-medium space-y-1">
+          <li>מודעות</li>
+          <li>תת מודע</li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-6">
+        <h3 class="text-xl font-bold text-[#0b6e6e] mb-2">פרק 4: המוקשים שמהם צריך להימנע</h3>
+        <ul class="list-disc pr-5 text-black font-medium space-y-1">
+          <li>שיפוט עצמי</li>
+          <li>כעס עצמי</li>
+          <li>רחמים עצמיים</li>
+          <li>שמירת דברים בבטן</li>
+          <li>קבלת החלטות</li>
+          <li>הרס עצמי</li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-6">
+        <h3 class="text-xl font-bold text-[#0b6e6e] mb-2">פרק 5: עשה ואל תעשה</h3>
+        <ul class="list-disc pr-5 text-black font-medium space-y-1">
+          <li>הזדהות</li>
+          <li>בריחה</li>
+          <li>דמיון מודרך</li>
+          <li>התנגדות והדחקה</li>
+          <li>דחיינות</li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-6">
+        <h3 class="text-xl font-bold text-[#0b6e6e] mb-2">פרק 6: שינוי תפיסה</h3>
+        <ul class="list-disc pr-5 text-black font-medium space-y-1">
+          <li>דיכאון כמתנה</li>
+          <li>אחיזה בדיכאון ממקום שגוי</li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-6">
+        <h3 class="text-xl font-bold text-[#0b6e6e] mb-2">פרק 7: תקווה חדשה</h3>
+        <ul class="list-disc pr-5 text-black font-medium space-y-1">
+          <li>נטיות אובדניות</li>
+          <li>החלטה לבצע שינוי</li>
+          <li>שאריות הדיכאון</li>
+          <li>התניה</li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-6 relative">
+        <h3 class="text-xl font-bold text-[#0b6e6e] mb-2">פרק 8: את/ה בתפקיד המטפל/ת שלך</h3>
+        <ul class="list-disc pr-5 text-black font-medium space-y-1">
+          <li>להשלים עם העבר</li>
+          <li>חשבון נפש</li>
+        </ul>
+        <div class="mt-4 text-center">
+          <a class="bg-[#0b6e6e] text-white py-2 px-4 rounded-lg hover:bg-[#0a5a5a] transition" href="#" id="Chapter8">
+            להורדת להשלים עם העבר ב- <i class="fas fa-gift"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-6">
+        <h3 class="text-xl font-bold text-[#0b6e6e] mb-2">פרק 9: התמודדות מבפנים ומבחוץ</h3>
+        <ul class="list-disc pr-5 text-black font-medium space-y-1">
+          <li>אמונה שגויה</li>
+          <li>משל הגלים</li>
+          <li>ההשפעה שלנו על הסביבה</li>
+          <li>ולהפך</li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-6">
+        <h3 class="text-xl font-bold text-[#0b6e6e] mb-2">פרק 10: דיכאון כנקודת פתיחה</h3>
+        <ul class="list-disc pr-5 text-black font-medium space-y-1">
+          <li>היום שאחרי</li>
+          <li>ממני אליכם, תודות</li>
+        </ul>
+      </div>
+
+    </div>
   </div>
+</section>
+
+
+</div>
 </div>
 
 </div>
@@ -320,81 +438,16 @@
 <div class="absolute -left-40 -top-40 h-[500px] w-[500px] rounded-full border-[80px] border-[var(--light-background-color)] opacity-40 shadow-lg"></div>
 <div class="absolute -right-60 bottom-0 h-[500px] w-[500px] rounded-full border-[80px] border-[var(--accent-color)] opacity-40 shadow-lg"></div>
 </div>
-<div class="mx-auto px-4 pb-32 lg:container sm:px-12 xl:px-32">
+<div class="mx-auto px-4 pb-10 lg:container sm:px-12 xl:px-32">
 <div class="relative">
 <div class="pt-24">
-<h1 style="text-align:center;" class="mb-8 text-center text-4xl font-bold [font-family:var(--font-family-heading)] lg:text-left lg:text-5xl xl:text-6xl">הספר "דיכאון כמתנה" - מפת דרכים להחלמה</h1>
-<p  style="text-align:center;"class="mb-8 text-center text-3xl font-semibold text-[var(--dark-text-color)] lg:text-left" style="font-family: &#39;Heebo&#39;, sans-serif; line-height: 1.4;">אז רגע לפני שאתם מקבלים את ההחלטה שלאחריה החיים שלכם לא הולכים לחזור להיות אותו הדבר אני רוצה לומר תודה – תודה על ההזדמנות לחשוף בפניכם מציאות חדשה, תודה על שלא ויתרתם לעצמכם ותודה על שלמרות התחושות הקשות עדיין בחרתם לתת הזדמנות לשינוי המציאות.</p>
-</div>
-</div>
-<div class="relative grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
-<div class="flex flex-col rounded-3xl shadow-lg order-2 md:order-1">
-<div class="relative aspect-square h-[400px] overflow-hidden rounded-t-3xl"><img class="h-full w-full object-cover" src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/4c3a58ef-edec-4890-44aa-4dc8b9aa4b00/public" alt="Goals on highway road of empty asphalt road at beautiful sunset." data-landingsite-gallery-type="image" data-media="{&quot;id&quot;:&quot;1423273112&quot;,&quot;src&quot;:&quot;iStock&quot;,&quot;type&quot;:&quot;image&quot;}"></div>
-<div class="rounded-b-3xl bg-[#ffffff] p-6">
-<div style="text-align:center;" class="text-2xl font-bold">כלים מעשיים</div>
-<div style="text-align:center;" class="text-lg font-thin text-[var(--gray-text-color)]">שיטות לעבודה עצמית ולהתמודדות עם אתגרים נפשיים</div>
-</div>
-</div>
-<div class="flex flex-col rounded-3xl shadow-lg order-1 md:order-2">
-<div class="relative aspect-square h-[400px] overflow-hidden rounded-t-3xl"><img class="h-full w-full object-cover" src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/b00f1955-1551-4435-6c88-f1e6a2d0de00/public" alt="Businessman holding target icon" data-landingsite-gallery-type="image" data-media="{&quot;id&quot;:&quot;2165342498&quot;,&quot;src&quot;:&quot;iStock&quot;,&quot;type&quot;:&quot;image&quot;}"></div>
-<div class="rounded-b-3xl bg-[#ffffff] p-6">
-<div style="text-align:center;" class="text-2xl font-bold">דיכאון כמתנה</div>
-<div style="text-align:center;" class="text-lg font-thin text-[var(--gray-text-color)]">הכוח לחדש חיים מתוך כאב</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="relative bg-gradient-to-br from-[var(--light-background-color)] to-[var(--light-background-color)] code-section" id="s4p08a">
-<div class="container relative z-10 mx-auto px-4 pb-12 pt-16 sm:px-12 lg:pb-24 xl:px-32">
-<h2 class="mb-6 text-center text-3xl font-bold [font-family:var(--font-family-heading)] xl:text-4xl 2xl:text-5xl">מה אומרים הקוראים שלנו</h2>
-<h3 class="mx-auto mb-16 w-3/4 text-center font-thin text-[var(--gray-text-color)] text-2xl">הספר "דיכאון כמתנה" מציע פתרונות מעשיים לכל מי שמעוניין בשינוי אמיתי ושיפור בחיים.</h3>
-<div class="relative w-full">
-<div class="absolute h-full w-full -rotate-3 transform rounded-3xl bg-[var(--medium-background-color)]"></div>
-<div class="relative z-10 w-full rounded-3xl bg-[#ffffff] py-12 shadow-[0_0_25px_rgba(0,0,0,0.1)]" style="background-image: url(&#39;https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/4f6b5874-897d-457e-7987-b5496e285000/public&#39;); background-size: cover; background-position: center;">
-<div class="absolute -top-12 left-12"><i class="fa-solid fa-quote-left text-8xl text-[var(--medium-background-color)]" aria-hidden="true"></i></div>
-<div class="absolute -bottom-12 right-12"><i class="fa-solid fa-quote-right text-8xl text-[var(--medium-background-color)]" aria-hidden="true"></i></div>
-<div class="grid grid-cols-1 gap-8 md:grid-cols-2 px-8">
-<div class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-md">
-<div class="mb-4 text-3xl font-bold text-black">שינוי חיים משמעותי</div>
-<div class="mb-4 text-base text-black">"הספר 'דיכאון כמתנה' עזר לי לגלות את הכוח הפנימי שלי. הוא הפך את האתגר למסע של גילוי מחדש. אני ממליצה עליו בחום!"</div>
-<div class="mb-4 text-base font-bold text-black">- נועה פרידמן</div>
-</div>
-<div class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-md">
-<div class="mb-4 text-3xl font-bold text-black">מסע של תקווה</div>
-<div class="mb-4 text-base text-black">"קראתי את הספר בזמן קשה בחיי, והוא סיפק לי תובנות עמוקות ודרכים חדשות להתמודד עם האתגרים הנפשיים שלי."</div>
-<div class="mb-4 text-base font-bold text-black">- דני כהן</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="relative bg-gradient-to-br from-[var(--light-background-color)] to-[var(--light-background-color)] code-section" id="s4p08a">
-<div class="container mx-auto px-4 sm:px-12 lg:pb-12 xl:px-32">
-<div class="flex flex-col items-center lg:flex-row">
-<div class="mt-12 w-full lg:mt-24 lg:w-[55%] lg:pr-14">
-<h1 class="mb-8 text-center text-5xl font-bold [font-family:var(--font-family-heading)] lg:text-center xl:text-6xl 2xl:text-7xl tracking-tight leading-tight text-[var(--dark-text-color)]">
-<div >האם אתם מוכנים לשנות את חייכם ולקבל את מתנת התקווה?</div>
-</h1>
-<p style="text-align:center;" class="mb-8 text-center text-[var(--gray-text-color)] lg:text-left font-medium leading-relaxed tracking-wide text-2xl md:text-3xl">גלה את הספר פורץ הדרך "דיכאון כמתנה", שנועד להעצים את הפרטים המתמודדים עם אתגרים רגשיים. מדריך זה לטיפול עצמי מכיל תובנות חיוניות וכלים מעשיים לשבור את מעגל הייאוש ולחזור לשלוט בחייך.</p>
-<div style="text-align:center;" class="mb-8 pl-8 text-center text-[var(--gray-text-color)] lg:text-left">
-<ul class="">
-<li class="mb-4 flex flex-row justify-end items-center"><i class="fa fa-check mt-0 text-green-500 text-2xl" aria-hidden="true"></i><span class="ml-4 font-medium leading-relaxed tracking-wide text-xl">אסטרטגיות שיקום מדורגות - למד שיטות צעד אחר צעד כדי לנווט דרך סערות רגשיות ולגלות מחדש את השמחה.</span></li>
-<li class="mb-4 flex flex-row justify-end items-center"><i class="fa fa-check mt-0 text-green-500 text-2xl" aria-hidden="true"></i><span class="ml-4 font-medium leading-relaxed tracking-wide text-xl">תוכן נגיש ומרתק - נכתב בסגנון קרוב ללב, ספר זה עושה רעיונות עמוקים קלים להבנה וליישום.</span></li>
-</ul>
-</div>
-<p class="mb-12 text-center text-[var(--gray-text-color)] lg:text-left font-medium leading-relaxed tracking-wide text-2xl">המסע מהחושך אל האור אפשרי עם ההכוונה הנכונה. "דיכאון כמתנה" הוא לא רק ספר; זהו ליווי שלך לעתיד טוב יותר, מלא בעצות מעשיות ובתמיכה כנה.</p>
-<div class="mb-12 text-center lg:text-left">
-  <a href="#purchase" class="items-center rounded-[var(--button-rounded-radius)] bg-[var(--primary-color)] px-[var(--button-padding-x)] py-[var(--button-padding-y)] font-semibold text-[var(--primary-button-text-color)] hover:bg-[var(--primary-button-hover-bg-color)] hover:text-[var(--primary-button-hover-text-color)]">
-    <span>קבלו את הספר המעצים שלכם - הזמינו עכשיו!</span>
+<p  style="text-align:center;"class="mb-8 text-center text-3xl font-semibold text-[var(--dark-text-color)] lg:text-left" style="font-family: &#39;Heebo&#39;, sans-serif; line-height: 1.4;">אז רגע לפני שאתם מקבלים את ההחלטה שלאחריה החיים שלכם לא הולכים לחזור להיות אותו הדבר אני רוצה לומר תודה – תודה על ההזדמנות לחשוף בפניכם מציאות חדשה.</p>
+<div class="text-center mt-4">
+  <a href="#purchase" class="inline-block bg-white text-[#0b6e6e] font-semibold py-3 px-6 rounded-lg shadow hover:bg-[#f0f0f0] transition">
+    לרכישה עכשיו
   </a>
 </div>
-</div>
-<div class="relative mt-12 hidden w-full overflow-visible lg:block lg:w-[45%] lg:p-6">
-<div class="absolute bottom-0 left-0 h-0 w-0 border-[100px] border-transparent border-b-[var(--primary-color)] border-l-[var(--primary-color)]"></div>
-<div class="absolute -right-9 top-16 h-[145px] w-[190px] bg-[radial-gradient(#cbcacc_3px,transparent_3px)] [background-size:16px_16px]"></div><img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/bbefd6b6-b0ca-497a-8bfc-1d4c5f7a3600/public" alt="Hand holding drawing virtual lightbulb with brain on bokeh background for creative and smart thinking idea concep" class="relative mt-8 aspect-square w-full rounded-2xl object-cover lg:mt-0" data-landingsite-gallery-type="image" data-media="{&quot;id&quot;:&quot;1344939844&quot;,&quot;src&quot;:&quot;iStock&quot;,&quot;type&quot;:&quot;image&quot;}">
-<div class="absolute bottom-0 right-0 z-10 aspect-square w-[45%] rounded-2xl bg-[#ffffff] p-6"><img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/f5c43d44-63be-4a17-570a-8e9a46886700/publicContain" alt="Humans are using laptops and computers to interact with AI, helping them create, code, train AI, or analyze big data with fast, cutting-edge  technology." class="relative mt-8 h-full object-cover lg:mt-0" data-landingsite-gallery-type="image" data-media="{&quot;id&quot;:&quot;2197955227&quot;,&quot;src&quot;:&quot;iStock&quot;,&quot;type&quot;:&quot;image&quot;}"></div>
+
 </div>
 </div>
 </div>
@@ -560,26 +613,11 @@
 </div>
 </div>
 <script src="https://app.landingsite.ai/embed/main.umd.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       </div>
     <div class="frame-content"></div>
-	</div>
 <script>
-  function openModal() {
-    const modal = document.getElementById('popupModal');
-    const content = document.getElementById('modalContent');
-    modal.classList.remove('hidden');
-
-    // טוען את הקובץ לתוך ה-modal
-    fetch('table-content.html')
-      .then(res => res.text())
-      .then(html => content.innerHTML = html)
-      .catch(err => content.innerHTML = "שגיאה בטעינת תוכן.");
-  }
-
-  function closeModal() {
-    document.getElementById('popupModal').classList.add('hidden');
-  }
-  document.querySelectorAll('[data-landingsite-faq-question]').forEach((question) => {
+querySelectorAll('[data-landingsite-faq-question]').forEach((question) => {
     question.addEventListener('click', () => {
       const thisAnswer = question.nextElementSibling;
       const thisIcon = question.querySelector('i');
@@ -627,6 +665,7 @@ animatedElements.forEach(el => {
     observer.observe(el);
 });
 
+  document.
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
