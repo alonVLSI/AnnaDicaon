@@ -33,7 +33,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
-	<script src="script.js"></script>
 
     <link id="google-fonts-link" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Roboto:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8e98006f77.js" crossorigin="anonymous"></script><style media="all" id="fa-kit-upload"></style><style media="all" id="fa-v4-font-face">/*!
@@ -178,7 +177,7 @@ body {
     
     <!-- האליפסה -->
     <svg class="absolute inset-0 w-full h-full pointer-events-none animate-ellipse-draw" viewBox="0 0 100 40" preserveAspectRatio="none">
-      <ellipse cx="50" cy="20" rx="48" ry="18"
+      <ellipse cx="50" cy="20" rx="49" ry="19"
                stroke="red"
                stroke-width="2"
                fill="none"
@@ -662,31 +661,38 @@ body {
       </div>
     <div class="frame-content"></div>
 <script>
-querySelectorAll('[data-landingsite-faq-question]').forEach((question) => {
-    question.addEventListener('click', () => {
-      const thisAnswer = question.nextElementSibling;
-      const thisIcon = question.querySelector('i');
+document.addEventListener("DOMContentLoaded", function () {
+  const faqQuestions = document.querySelectorAll("[data-landingsite-faq-question]");
 
-      // סגירת כל שאר התשובות
-      document.querySelectorAll('[data-landingsite-faq-answer]').forEach((answer) => {
-        if (answer !== thisAnswer) {
-          answer.classList.add('hidden');
-        }
+  faqQuestions.forEach((question) => {
+    question.addEventListener("click", () => {
+      const answer = question.nextElementSibling;
+
+      // סגור את כל התשובות
+      document.querySelectorAll("[data-landingsite-faq-answer]").forEach((el) => {
+        if (el !== answer) el.classList.add("hidden");
       });
 
-      // איפוס כל האייקונים
-      document.querySelectorAll('[data-landingsite-faq-question] i').forEach((icon) => {
-        if (icon !== thisIcon) {
-          icon.classList.remove('rotate-180');
-        }
+      // סובב חיצים של כולם חזרה
+      document.querySelectorAll(".faq-question i").forEach((icon) => {
+        if (icon !== question.querySelector("i")) icon.classList.remove("rotate-180");
       });
 
-      // פתיחה/סגירה של התשובה הנוכחית
-      thisAnswer.classList.toggle('hidden');
-      thisIcon.classList.toggle('rotate-180');
+      // toggle פתיחה/סגירה של התשובה הנוכחית
+      answer.classList.toggle("hidden");
+
+      // סובב את החץ הנוכחי
+      question.querySelector("i").classList.toggle("rotate-180");
     });
   });
+});
 
+ function openModal() {
+    const modal = document.getElementById('popupModal');
+    const content = document.getElementById('modalContent');
+    modal.classList.remove('hidden');
+
+  }
 	  window.onload = function() {
     var s = document.createElement('script');
     s.setAttribute('data-account', 'VZA8XqqwST');
@@ -710,7 +716,6 @@ animatedElements.forEach(el => {
     observer.observe(el);
 });
 
-  document.
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -806,21 +811,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         button.classList.add('active');
         const tabId = button.getAttribute('data-tab');
         document.getElementById(tabId).classList.add('active');
-      });
-    });
-  }
-
-  // Accordion
-  const accordionHeaders = document.querySelectorAll('.accordion-header');
-  if (accordionHeaders.length) {
-    accordionHeaders.forEach(header => {
-      header.addEventListener('click', () => {
-        const accordionItem = header.parentElement;
-        accordionItem.classList.toggle('active');
-
-        document.querySelectorAll('.accordion-item').forEach(item => {
-          if (item !== accordionItem) item.classList.remove('active');
-        });
       });
     });
   }
