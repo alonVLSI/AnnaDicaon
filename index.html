@@ -345,7 +345,15 @@ body {
 
 <!-- Modal -->
 <div id="popupModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-<section id="chapters" class="bg-[#e0f7f7] py-12 px-4 text-right font-[Heebo]">
+  <div class="relative bg-white rounded-lg shadow-lg w-full max-w-6xl overflow-hidden">
+    
+    <!-- כפתור סגירה -->
+    <button onclick="document.getElementById('popupModal').classList.add('hidden')"
+            class="absolute top-3 left-3 text-gray-700 hover:text-red-500 text-2xl font-bold focus:outline-none z-50">
+      ×
+    </button>
+	</div>
+<section id="chapters" class="bg-[#e0f7f7] py-12 px-4 text-right">
   <div class="container mx-auto max-h-[700px] overflow-y-auto pr-2">
     <div class="text-center mb-10">
       <h2 class="text-4xl font-extrabold text-[#0b6e6e] mb-4">תוכן עניינים</h2>
