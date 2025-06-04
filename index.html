@@ -33,6 +33,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
+
 
     <link id="google-fonts-link" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Roboto:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8e98006f77.js" crossorigin="anonymous"></script><style media="all" id="fa-kit-upload"></style><style media="all" id="fa-v4-font-face">/*!
@@ -134,12 +136,14 @@
   border: #3B82F6 solid 2px;
 }
 :root {
-  --font-family-body: 'Secular One', sans-serif;
-  --font-family-heading: 'Secular One', sans-serif;
+  --font-family-body: 'Assistant', sans-serif;
+  --font-family-heading: 'Assistant', sans-serif;
 }
+
 body {
-  font-family: 'Secular One', sans-serif;
+  font-family: var(--font-family-body);
 }
+
 @keyframes drawEllipse {
   to {
     stroke-dashoffset: 0;
@@ -147,21 +151,21 @@ body {
 }
 
 .animate-ellipse-draw ellipse {
-  animation: drawEllipse 3s ease forwards;
+  animation: drawEllipse 4s ease forwards;
 }
 
 </style>
     <link rel="icon" type="image/png" href="https://landingsite-app-public.s3.us-east-2.amazonaws.com/logos/user/5b581a22-f62d-405b-991d-098a9537ccb2/eeb86192-7687-4f8f-a11a-2e017c6bc4b3-favicon-0.png">
 <link rel="apple-touch-icon" type="image/png" href="https://landingsite-app-public.s3.us-east-2.amazonaws.com/logos/user/5b581a22-f62d-405b-991d-098a9537ccb2/eeb86192-7687-4f8f-a11a-2e017c6bc4b3-favicon-0.png">
-  <body class="bg-white min-h-screen">
+  <body class="bg-white min-h-screen m-0 p-0 overflow-x-hidden">
     <div class="frame-root max-w-full object-contain overflow-x-hidden">
       <div class="frame-content">
         <div class="[font-family:var(--font-family-body)]"><div><header class="relative z-50 bg-[var(--light-background-color)] code-section" id="six9s6h">
-<nav class="container mx-auto px-4 py-10 sm:px-12 xl:px-32">
+<nav class="container mx-auto px-4 pt-0 pb-10 sm:px-12 xl:px-32">
 <div class="flex flex-col items-center justify-center w-full">
 <div class="text-xl font-bold w-full text-center">
 <div class="mb-4">
-  <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] [font-family:var(--font-family-heading)] text-center">
+  <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white [font-family:var(--font-family-heading)] text-center">
     דיכאון כמתנה
   </h1>
 
@@ -171,20 +175,24 @@ body {
 
   <!-- עוטף רק את ה-h3 -->
   <div class="relative inline-block mt-4 mx-auto">
-    <h3 class="text-xl md:text-2xl lg:text-3xl font-bold text-[var(--accent2-color)] [font-family:var(--font-family-body)] text-center relative z-10 px-4">
-      הספר החדשני ופורץ הדרך בתחום הטיפול העצמי
-    </h3>
-    
-    <!-- האליפסה -->
-    <svg class="absolute inset-0 w-full h-full pointer-events-none animate-ellipse-draw" viewBox="0 0 100 40" preserveAspectRatio="none">
-      <ellipse cx="50" cy="20" rx="49" ry="19"
-               stroke="red"
-               stroke-width="2"
-               fill="none"
-               stroke-dasharray="300"
-               stroke-dashoffset="300"
-      />
-    </svg>
+<div class="relative inline-block">
+  <h3 class="text-xl md:text-2xl lg:text-3xl font-bold text-[var(--accent2-color)] font-[var(--font-family-body)] text-center relative z-10 px-4 py-2">
+    הספר החדשני ופורץ הדרך בתחום הטיפול העצמי
+  </h3>
+
+  <!-- האליפסה -->
+  <svg class="absolute inset-0 w-full h-full pointer-events-none animate-ellipse-draw z-0"
+       viewBox="0 0 100 40" preserveAspectRatio="none">
+    <ellipse cx="50" cy="20" rx="48" ry="18"
+             stroke="red"
+             stroke-width="2"
+             fill="none"
+             stroke-dasharray="300"
+             stroke-dashoffset="300"
+    />
+  </svg>
+</div>
+
   </div>
 </div>
 
@@ -500,17 +508,20 @@ body {
 <div class="container mx-auto px-4 sm:px-12 xl:px-32">
 <div class="flex flex-col md:flex-row items-center">
 <div class="w-full md:w-1/2 mb-8 md:mb-0 md:pl-8">
-<img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/17dba55e-ba70-4501-1154-55d8f9126c00/public" alt="שאלות נפוצות אודות ספר דיכאון כמתנה" class="w-full h-auto object-contain" data-media="{&quot;id&quot;:&quot;487420c0-d489-11ef-beaa-0242ac140003&quot;,&quot;src&quot;:&quot;iconscout&quot;,&quot;type&quot;:&quot;illustration&quot;}">
-</div>
+<img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/17dba55e-ba70-4501-1154-55d8f9126c00/public" alt="שאלות נפוצות אודות ספר דיכאון כמתנה"
+     class="w-full h-auto object-contain"
+     style="filter: sepia(0.7) saturate(3) hue-rotate(-30deg) brightness(0.9);">
+
+	 </div>
 <div class="w-full md:w-1/2">
 <h2 class="text-4xl font-bold [font-family:var(--font-family-heading)] text-center mb-8">שאלות נפוצות</h2>
 <div class="space-y-4">
-<div class="accordion-item faq-item border-b border-[var(--light-border-color)] pb-2 mb-4 bg-white/50 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-<div class="accordion-header faq-question flex justify-between items-center cursor-pointer py-4 px-4 hover:bg-[var(--light-background-color)] rounded-lg transition-all duration-300 " data-landingsite-faq-question="true">
+<div class="faq-item border-b border-[var(--light-border-color)] pb-2 mb-4 bg-white/50 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+<div class="faq-question flex justify-between items-center cursor-pointer py-4 px-4 hover:bg-[var(--light-background-color)] rounded-lg transition-all duration-300" data-landingsite-faq-question="true">
 <h3 class="text-xl font-semibold text-[var(--dark-text-color)]">איך אדע אם הספר מתאים לי?</h3>
-<i class="fa-solid fas fa-chevron-down transition-transform duration-300" aria-hidden="true"></i>
+<i class="fa-solid fa-chevron-down transition-transform duration-300" aria-hidden="true"></i>
 </div>
-<div class="accordion-content faq-answer hidden text-[var(--dark-text-color)] text-lg p-4 bg-[var(--light-background-color)]/30 rounded-b-lg" data-landingsite-faq-answer="true">
+<div class="faq-answer hidden text-[var(--dark-text-color)] text-lg p-4 bg-[var(--light-background-color)]/30 rounded-b-lg" data-landingsite-faq-answer="true">
 הספר מתאים במיוחד למי שנמצא בדיכאון או חווה קושי נפשי ומחפש כלים להתמודד עם המצב ולצאת לדרך חדשה. הספר נכתב כמדריך מעשי שמכיל תובנות אישיות, ידע מעמיק על הדיכאון, דרכים להימנע ממוקשים רגשיים וכלים לשינוי תפיסה ובניית תקווה. כולי אמונה שגם אדם שלא חווה דיכאון יוכל להפיק ממנו ערך רב שיסייע לו לתמוך בעצמו או באחרים.</div>
 </div>
 <div class="faq-item border-b border-[var(--light-border-color)] pb-2 mb-4 bg-white/50 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
@@ -576,67 +587,25 @@ body {
 
         <div class="radio-group">
 
-          <div class="radio-option active" data-price="94">
+          <div class="radio-option active" data-price="94" data-url="https://pay.grow.link/881b64f5fe40c026ac8780c76c989c1a-MjEyMDAxMg">
             <span class="radio-btn"></span>
             <div class="radio-content">
-              <label>איסוף עצמי <span class="price">₪94</span></label>
-
-              <!-- תפריט כתובות -->
-              <div class="pickup-location">
-                <label for="pickup-select">בחר כתובת איסוף:</label>
-                <select id="pickup-select" name="pickup-location" class="text-black rounded-md">
-                  <option value="tel-aviv" class="text-black">תל אביב - אבן גבירול 144</option>
-                  <option value="jerusalem" class="text-black">אשקלון - אהוד 2</option>
-                </select>
-              </div>
+              <label>איסוף עצמי(מאשקלון או תל אביב) <span class="price">₪94</span></label>
             </div>
           </div>
 
-          <div class="radio-option" data-price="119">
+          <div class="radio-option" data-price="119" data-url = "https://pay.grow.link/35c75f7fd6423eec9975b515248ee4d8-MjExNjM1Mw">
             <span class="radio-btn"></span>
             <div class="radio-content">
               <label>משלוח עד הבית <span class="price">₪119</span></label>
               <div class="feature text-lg">משלוח עד 7 ימי עסקים <i class="fas fa-truck"></i></div>
-
-              <!-- שדה כתובת למשלוח -->
-              <div id="shipping-address" style="display: none; margin-top: 1rem;">
-                <label for="address">הכנס כתובת למשלוח:</label>
-                <input type="text" id="address" name="shipping-address" class="text-black rounded-md" placeholder="הכנס כתובת" />
-              </div>
             </div>
           </div>
-
-        </div>
-      </div>
-
-      <div class="order-summary">
-        <h3><i class="fas fa-credit-card"></i> סיכום הזמנה</h3>
-
-        <div class="summary-content">
-          <div class="summary-row">
-            <span>מוצר:</span>
-            <span id="product-name">ספר מודפס</span>
-          </div>
-
-          <div class="summary-row">
-            <span>מחיר:</span>
-            <span id="product-price">₪94</span>
-          </div>
-
-          <div class="summary-row delivery-row" style="display: none;">
-            <span>משלוח:</span>
-            <span>₪25</span>
-          </div>
-
-          <div class="summary-row total-row">
-            <span>סה"כ:</span>
-            <span id="total-price" class="highlight-price">₪94</span>
-          </div>
-        </div>
-
         <button class="btn-purchase">לרכישה מאובטחת</button>
         <p class="purchase-note text-white">התשלום מאובטח ומוצפן</p>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -841,13 +810,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   }
 
-  const purchaseBtn = document.querySelector('.btn-purchase');
-  if (purchaseBtn) {
-    purchaseBtn.addEventListener('click', function () {
-      alert('מערכת הרכישה תהיה פעילה בקרוב. תודה על ההתעניינות!');
-    });
-  }
-
   window.addEventListener("DOMContentLoaded", () => {
     const header = document.querySelector(".header");
     const hero = document.querySelector(".hero");
@@ -887,16 +849,31 @@ document.getElementById("Chapter8").addEventListener("click", function () {
 
       // בדוק אם הטקסט כולל "משלוח עד הבית"
       const labelText = option.innerText || "";
-      const shippingField = document.getElementById('shipping-address');
-
-      if (labelText.includes("משלוח עד הבית")) {
-        shippingField.style.display = 'block';
-      } else {
-        shippingField.style.display = 'none';
-      }
     });
   });
+  document.querySelector('.btn-purchase').addEventListener('click', function () {
+    // חפש את האופציה הנבחרת
+    const selectedOption = document.querySelector('.radio-option.active');
+    
+    if (selectedOption) {
+      const url = selectedOption.getAttribute('data-url');
+      if (url) {
+        window.location.href = url;
+      } else {
+        alert('לא נמצא קישור לרכישה');
+      }
+    } else {
+      alert('אנא בחר אפשרות רכישה');
+    }
+  });
 
+  // קוד להפעלת "active" כשמשנים בחירה
+  document.querySelectorAll('.radio-option').forEach(option => {
+    option.addEventListener('click', function () {
+      document.querySelectorAll('.radio-option').forEach(opt => opt.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
 
 </script>
 
