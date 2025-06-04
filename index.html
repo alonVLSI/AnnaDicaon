@@ -446,7 +446,7 @@ body {
           <li>חשבון נפש</li>
         </ul>
         <div class="mt-4 text-center">
-          <a class="bg-[#0b6e6e] text-white py-2 px-4 rounded-lg hover:bg-[#0a5a5a] transition" href="#" id="Chapter8">
+          <a class="bg-[#0b6e6e] text-white py-2 px-4 rounded-lg hover:bg-[#0a5a5a] transition" id="Chapter8-modal">
             להורדת להשלים עם העבר ב- <i class="fas fa-gift"></i>
           </a>
         </div>
@@ -818,7 +818,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       hero.style.marginTop = (headerHeight + 30) + "px";
     }
   });
-document.getElementById("Chapter8").addEventListener("click", function () {
+  ["Chapter8", "Chapter8-modal"].forEach(id => {
+  document.getElementById(id).addEventListener("click", function () {
   const link = document.createElement("a");
   link.href = "Chapter8.pdf";
   link.setAttribute("download", "Chapter8.pdf");
@@ -840,6 +841,7 @@ document.getElementById("Chapter8").addEventListener("click", function () {
   setTimeout(() => {
     document.body.removeChild(message);
   }, 3000);
+});
 });
   document.querySelectorAll('.radio-option').forEach(option => {
     option.addEventListener('click', () => {
