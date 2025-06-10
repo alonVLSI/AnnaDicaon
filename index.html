@@ -271,23 +271,18 @@ body {
 </div>
 </div>
 </section>
-<section class="bg-white py-12 px-4 sm:px-12 xl:px-32">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl md:text-3xl font-bold text-[var(--dark-text-color)] mb-6 [font-family:var(--font-family-heading)]">
+<section class="py-12 px-4 sm:px-12 xl:px-32">
+  <div class="w-full max-w-3xl mx-auto cursor-pointer relative" onclick="playVideo()">
+    <img id="videoThumbnail" src="frame.png" alt="Thumbnail" alt="תמונה מקדימה לסרטון המלצה על הספר דיכאון במתנה" class="w-full rounded-xl" />
     
-    <!-- הטמעת סרטון מיוטיוב -->
-    <div class="aspect-w-16 aspect-h-9 w-full">
-      <iframe class="w-full h-full rounded-xl shadow-lg" src="https://youtu.be/MWCes9_xmgA?si=M3he4WqMioVAqPv6" 
-              title="סרטון על הספר דיכאון כמתנה" frameborder="0" allowfullscreen></iframe>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <svg width="60" height="60" viewBox="0 0 24 24" fill="#ffffffaa">
+        <circle cx="12" cy="12" r="12" fill="#00000088"/>
+        <polygon points="10,8 16,12 10,16" fill="white"/>
+      </svg>
     </div>
     
-    <!-- לחלופין, אם אתה משתמש בקובץ וידאו מקומי -->
-    <!--
-    <video controls class="w-full rounded-xl shadow-lg mt-6">
-      <source src="videos/sample.mp4" type="video/mp4">
-      הדפדפן שלך לא תומך בניגון וידאו.
-    </video>
-    -->
+    <video id="videoPlayer" alt="סרטון המלצה על הספר דיכאון במתנה"  src="video.mp4" controls class="w-full rounded-xl hidden"></video>
   </div>
 </section>
 
@@ -666,7 +661,13 @@ body {
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init();
-
+function playVideo() {
+    const thumbnail = document.getElementById('videoThumbnail');
+    const video = document.getElementById('videoPlayer');
+    thumbnail.style.display = 'none';
+    video.style.display = 'block';
+    video.play();
+  }
 document.addEventListener("DOMContentLoaded", function () {
   const faqQuestions = document.querySelectorAll("[data-landingsite-faq-question]");
 
