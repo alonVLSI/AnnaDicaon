@@ -272,17 +272,17 @@ body {
 </div>
 </section>
 <section class="py-12 px-4 sm:px-12 xl:px-32">
-  <div class="w-full max-w-3xl mx-auto cursor-pointer relative" onclick="playVideo()">
-    <img id="videoThumbnail" src="frame.png" alt="Thumbnail" alt="תמונה מקדימה לסרטון המלצה על הספר דיכאון במתנה" class="w-full rounded-xl" />
+  <div style="position: relative; width: 100%; max-width: 700px; height:100%; cursor: pointer;" onclick="playVideo()">
+    <img id="videoThumbnail" src="frame.png" alt="תמונה מקדימה לסרטון הסבר על הספר" style="width: 100%; border-radius: 12px;" />
     
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+    <div id="playIcon" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
       <svg width="60" height="60" viewBox="0 0 24 24" fill="#ffffffaa">
         <circle cx="12" cy="12" r="12" fill="#00000088"/>
         <polygon points="10,8 16,12 10,16" fill="white"/>
       </svg>
     </div>
-    
-    <video id="videoPlayer" alt="סרטון המלצה על הספר דיכאון במתנה"  src="video.mp4" controls class="w-full rounded-xl hidden"></video>
+
+    <video id="videoPlayer" src="video.mp4" controls style="display: none; width: 100%; border-radius: 12px;"></video>
   </div>
 </section>
 
@@ -661,10 +661,13 @@ body {
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init();
-function playVideo() {
-    const thumbnail = document.getElementById('videoThumbnail');
+ function playVideo() {
     const video = document.getElementById('videoPlayer');
+    const thumbnail = document.getElementById('videoThumbnail');
+    const playIcon = document.getElementById('playIcon');
+
     thumbnail.style.display = 'none';
+    playIcon.style.display = 'none';
     video.style.display = 'block';
     video.play();
   }
