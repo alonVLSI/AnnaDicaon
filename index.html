@@ -272,10 +272,10 @@ body {
 </div>
 </section>
 <section class="py-12 px-4 sm:px-12 xl:px-32">
-  <div style="position: relative; width: 100%; max-width: 700px; cursor: pointer;" onclick="playVideo()">
-    <img id="videoThumbnail" src="images/frame.png" alt="תמונה מקדימה לסרטון הסבר על הספר" style="width: 100%; border-radius: 12px;" />
-    <video id="videoPlayer" src="images/video.mp4" controls style="display: none; width: 100%; border-radius: 12px;"></video>
-  </div>
+<div style="position: relative; width: 100%; max-width: 700px; cursor: pointer;" onclick="playVideo()">
+  <img id="videoThumbnail" src="images/frame.png" alt="תמונה מקדימה לסרטון הסבר על הספר" style="width: 100%; border-radius: 12px;" />
+  <video id="videoPlayer" src="images/video.mp4" controls style="display: none; width: 100%; border-radius: 12px;"></video>
+</div>
 </section>
 
 <section class="py-20 code-section relative bg-gradient-to-br from-[var(--light-background-color)] to-[var(--medium-background-color)]" id="sz3khvd">
@@ -869,7 +869,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       this.classList.add('active');
     });
   });
+  function playVideo() {
+    const video = document.getElementById('videoPlayer');
+    const thumbnail = document.getElementById('videoThumbnail');
 
+    thumbnail.style.display = 'none';
+    video.style.display = 'block';
+
+    video.playbackRate = 1.25; // כאן מגדירים את המהירות
+    video.play();
+  }
 </script>
 
 
